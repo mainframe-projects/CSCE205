@@ -6,4 +6,4 @@
 
   Instructor: Dr. Chris Brown
 
-<h3> Project Output Files </h3>
+<h3> COBOL Output Files </h3>

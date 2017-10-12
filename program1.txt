@@ -1,0 +1,247 @@
+1                    J E S 2  J O B  L O G  --  S Y S T E M  S 0 W 1  --  N O D E  Z O S K C T R         
+0 
+ 21.19.11 JOB07918 ---- TUESDAY,   03 OCT 2017 ----
+ 21.19.11 JOB07918  IRR010I  USERID KC03KDC  IS ASSIGNED TO THIS JOB.
+ 21.19.11 JOB07918  IEF677I WARNING MESSAGE(S) FOR JOB KC03KDCX ISSUED
+ 21.19.11 JOB07918  ICH70001I KC03KDC  LAST ACCESS AT 21:14:28 ON TUESDAY, OCTOBER 3, 2017
+ 21.19.11 JOB07918  $HASP373 KC03KDCX STARTED - INIT 3    - CLASS A        - SYS S0W1
+ 21.19.12 JOB07918  -                                         --TIMINGS (MINS.)--            ----PAGING COUNTS---
+ 21.19.12 JOB07918  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP    TCB    SRB  CLOCK   SERV  PG   PAGE   SWAP    VIO SWAPS
+ 21.19.12 JOB07918  -KC03KDCX                      00    431 ******    .00     .0    868   0      0      0      0     0
+ 21.19.12 JOB07918  -KC03KDCX                      00    169 ******    .00     .0    608   0      0      0      0     0
+ 21.19.12 JOB07918  -KC03KDCX                      00    250 ******    .00     .0    420   0      0      0      0     0
+ 21.19.12 JOB07918  -KC03KDCX ENDED.  NAME-METZ                 TOTAL TCB CPU TIME=   .00  TOTAL ELAPSED TIME=    .0
+ 21.19.12 JOB07918  $HASP395 KC03KDCX ENDED
+0------ JES2 JOB STATISTICS ------
+-  03 OCT 2017 JOB EXECUTION DATE
+-           84 CARDS READ
+-          247 SYSOUT PRINT RECORDS
+-            0 SYSOUT PUNCH RECORDS
+-           16 SYSOUT SPOOL KBYTES
+-         0.01 MINUTES EXECUTION TIME
+         1 //KC03KDCX JOB 1,METZ,LINES=(5,CANCEL),NOTIFY=KC03KDC,                  JOB07918
+           // MSGLEVEL=(2,0),MSGCLASS=A                                            00020007
+         2 //STEP2 EXEC PROC=IGYWCLG,LNGPRFX='IGY420',                             00030007
+           // PARM.COBOL='NOX'                                                     00040007
+        26 //SYSIN DD *                                                            00050007
+        30 //LKED.SYSPRINT DD DUMMY                                                00088000
+        41 //GO.INVENTIN DD DSN=KC02580.P1G11.DAT,DISP=SHR                         00090018
+        42 //GO.INVRPT DD SYSOUT=A                                                 00100018
+        43 //GO.SYSOUT DD SYSOUT=A                                                 00110000
+  STMT NO. MESSAGE
+         2 IEFC001I PROCEDURE IGYWCLG WAS EXPANDED USING SYSTEM LIBRARY USER.PROCLIB
+        35 IEF686I DDNAME REFERRED TO ON DDNAME KEYWORD IN PRIOR STEP WAS NOT RESOLVED 
+ ICH70001I KC03KDC  LAST ACCESS AT 21:14:28 ON TUESDAY, OCTOBER 3, 2017
+ IEF142I KC03KDCX COBOL STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/COBOL   /START 2017276.2119
+ IEF032I STEP/COBOL   /STOP  2017276.2119 
+         CPU:     0 HR  00 MIN  00.03 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+         VIRT:  8896K  SYS:   308K  EXT:  1580656K  SYS:    11536K
+         ATB- REAL:                    24K  SLOTS:                     0K
+              VIRT- ALLOC:       4M SHRD:       0M
+ IEF142I KC03KDCX LKED STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/LKED    /START 2017276.2119
+ IEF032I STEP/LKED    /STOP  2017276.2119 
+         CPU:     0 HR  00 MIN  00.02 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+         VIRT:    88K  SYS:   292K  EXT:     1640K  SYS:    11484K
+         ATB- REAL:                     0K  SLOTS:                     0K
+              VIRT- ALLOC:       0M SHRD:       0M
+ IEF142I KC03KDCX GO STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/GO      /START 2017276.2119
+ IEF032I STEP/GO      /STOP  2017276.2119 
+         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+         VIRT:   120K  SYS:   384K  EXT:     2944K  SYS:    11640K
+         ATB- REAL:                     0K  SLOTS:                     0K
+              VIRT- ALLOC:       0M SHRD:       0M
+ IEF375I  JOB/KC03KDCX/START 2017276.2119
+ IEF033I  JOB/KC03KDCX/STOP  2017276.2119 
+         CPU:     0 HR  00 MIN  00.06 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0                         Date 10/03/2017  Time 21:19:12   Page     1                
+0Invocation parameters:                                                                                                              
+  NOX                                                                                                                                
+0Options in effect:                                                                                                                  
+  NOADATA                                                                                                                            
+    ADV                                                                                                                              
+    QUOTE                                                                                                                            
+    ARITH(COMPAT)                                                                                                                    
+  NOAWO                                                                                                                              
+  NOBLOCK0                                                                                                                           
+    BUFSIZE(4096)                                                                                                                    
+  NOCICS                                                                                                                             
+    CODEPAGE(1140)                                                                                                                   
+  NOCOMPILE(S)                                                                                                                       
+  NOCURRENCY                                                                                                                         
+    DATA(31)                                                                                                                         
+  NODATEPROC                                                                                                                         
+    DBCS                                                                                                                             
+  NODECK                                                                                                                             
+  NODIAGTRUNC                                                                                                                        
+  NODLL                                                                                                                              
+  NODUMP                                                                                                                             
+  NODYNAM                                                                                                                            
+  NOEXIT                                                                                                                             
+  NOEXPORTALL                                                                                                                        
+  NOFASTSRT                                                                                                                          
+    FLAG(I,I)                                                                                                                        
+  NOFLAGMIG4                                                                                                                         
+  NOFLAGSTD                                                                                                                          
+    INTDATE(ANSI)                                                                                                                    
+    LANGUAGE(EN)                                                                                                                     
+  NOLIB                                                                                                                              
+    LINECOUNT(60)                                                                                                                    
+  NOLIST                                                                                                                             
+  NOMAP                                                                                                                              
+  NOMDECK                                                                                                                            
+  NONAME                                                                                                                             
+    NSYMBOL(NATIONAL)                                                                                                                
+  NONUMBER                                                                                                                           
+    NUMPROC(NOPFD)                                                                                                                   
+    OBJECT                                                                                                                           
+  NOOFFSET                                                                                                                           
+  NOOPTIMIZE                                                                                                                         
+    OUTDD(SYSOUT)                                                                                                                    
+    PGMNAME(COMPAT)                                                                                                                  
+    RENT                                                                                                                             
+    RMODE(AUTO)                                                                                                                      
+    SEQUENCE                                                                                                                         
+    SIZE(MAX)                                                                                                                        
+    SOURCE                                                                                                                           
+    SPACE(1)                                                                                                                         
+  NOSQL                                                                                                                              
+    SQLCCSID                                                                                                                         
+  NOSSRANGE                                                                                                                          
+  NOTERM                                                                                                                             
+  NOTEST                                                                                                                             
+  NOTHREAD                                                                                                                           
+    TRUNC(STD)                                                                                                                       
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0                         Date 10/03/2017  Time 21:19:12   Page     2                
+0 NOVBREF                                                                                                                            
+  NOWORD                                                                                                                             
+    XMLPARSE(XMLSS)                                                                                                                  
+  NOXREF                                                                                                                             
+    YEARWINDOW(1900)                                                                                                                 
+    ZWB                                                                                                                              
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               BANKDATA  Date 10/03/2017  Time 21:19:12   Page     3                
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference           
+0  000001                IDENTIFICATION DIVISION.                                         00060011                                   
+   000002                PROGRAM-ID. BANKDATA.                                            00061011                                   
+   000003               **THIS PROGRAM PRINTS CUSTOMER INFORMATION FOR A BANK             00062011                                   
+   000004               **09/27/2017                                                      00063011                                   
+   000005                ENVIRONMENT DIVISION.                                            00064011                                   
+   000006                INPUT-OUTPUT SECTION.                                            00070011                                   
+   000007                FILE-CONTROL.                                                    00071011                                   
+   000008                    SELECT INV-FILE                                              00072014                                   
+   000009                        ASSIGN TO INVENTIN.                                      00073014                                   
+   000010                    SELECT INV-RPT                                               00074014                                   
+   000011                        ASSIGN TO INVRPT.                                        00075014                                   
+   000012                DATA DIVISION.                                                   00076011                                   
+   000013                FILE SECTION.                                                    00077011                                   
+   000014                FD INV-FILE.                                                     00078014                                   
+                                                                                                                                     
+ ==000014==> IGYGR1216-I A "RECORDING MODE" of "F" was assumed for file "INV-FILE".                                                  
+                                                                                                                                     
+   000015                01 INV-RECORD      PIC X(42).                                    00078114                                   
+   000016                FD INV-RPT.                                                      00078214                                   
+                                                                                                                                     
+ ==000016==> IGYGR1216-I A "RECORDING MODE" of "F" was assumed for file "INV-RPT".                                                   
+                                                                                                                                     
+   000017                01 INV-LIST        PIC X(62).                                    00079021                                   
+   000018                WORKING-STORAGE SECTION.                                         00079111                                   
+   000019                01  WS-SWITCHES.                                                 00079214                                   
+   000020                    05 WS-EOF      PIC X(3).                                     00079314                                   
+   000021                01  IR-INV-RECORD.                                               00079414                                   
+   000022                    05  IR-FIRST   PIC X(6).                                     00079620                                   
+   000023                    05  IR-LAST    PIC X(9).                                     00079820                                   
+   000024                    05  IR-ACTTYPE PIC X(1).                                     00079914                                   
+   000025                    05  IR-ACTNUM  PIC 9(8).                                     00080014                                   
+   000026                    05  IR-BAL     PIC 99999999V99.                              00080120                                   
+   000027                    05  IR-INTRATE PIC 9V999.                                    00081014                                   
+   000028                    05  IR-MEMSIN  PIC 9(4).                                     00081114                                   
+   000029                01  IL-INV-LIST.                                                 00082014                                   
+   000030                    05              PIC X(5) VALUE SPACES.                       00082121                                   
+   000031                    05 IL-FIRST     PIC X(6).                                    00082220                                   
+   000032                    05              PIC X(2) VALUE SPACES.                       00082314                                   
+   000033                    05 IL-LAST      PIC X(9).                                    00082420                                   
+   000034                    05              PIC X(2) VALUE SPACES.                       00082511                                   
+   000035                    05 IL-ACTTYPE   PIC X(1).                                    00082614                                   
+   000036                    05              PIC X(2) VALUE SPACES.                       00082711                                   
+   000037                    05 IL-ACTNUM    PIC 9(8).                                    00082814                                   
+   000038                    05              PIC X(2) VALUE SPACES.                       00082911                                   
+   000039                    05 IL-BAL       PIC $ZZZZZZZ9.99.                            00083021                                   
+   000040                    05              PIC X(2) VALUE SPACES.                       00083111                                   
+   000041                    05 IL-INTRATE   PIC 9.999.                                   00083222                                   
+   000042                    05              PIC X(2) VALUE SPACES.                       00083311                                   
+   000043                    05 IL-MEMSIN    PIC 9(4).                                    00083414                                   
+   000044                                                                                 00083508                                   
+   000045                PROCEDURE DIVISION.                                              00083611                                   
+   000046                100-HOUSEKEEPING.                                                00083813                                   
+   000047                    OPEN INPUT INV-FILE                                          00083914                                   
+   000048                         OUTPUT INV-RPT                                          00084014                                   
+   000049                    MOVE 'NO ' TO  WS-EOF                                        00084114                                   
+   000050                    PERFORM UNTIL WS-EOF = 'YES'                                 00084214                                   
+   000051      1                READ INV-FILE                                             00084314                                   
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               BANKDATA  Date 10/03/2017  Time 21:19:12   Page     4                
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference           
+0  000052      1                    INTO IR-INV-RECORD                                    00084414                                   
+   000053      1                  AT END                                                  00084506                                   
+   000054      2                    MOVE 'YES' TO WS-EOF                                  00084614                                   
+   000055      1                  NOT AT END                                              00084706                                   
+   000056      2                    PERFORM 200-PROCESS                                   00084806                                   
+   000057      1                END-READ                                                  00084914                                   
+   000058                    END-PERFORM                                                  00085011                                   
+   000059                    CLOSE INV-FILE                                               00085114                                   
+   000060                          INV-RPT                                                00085215                                   
+   000061                    STOP RUN                                                     00085311                                   
+   000062                    .                                                            00085414                                   
+   000063                200-PROCESS.                                                     00085611                                   
+   000064                    MOVE IR-FIRST TO IL-FIRST                                    00085815                                   
+   000065                    MOVE IR-LAST TO IL-LAST                                      00085911                                   
+   000066                    MOVE IR-ACTTYPE TO IL-ACTTYPE                                00086014                                   
+   000067                    MOVE IR-ACTNUM TO IL-ACTNUM                                  00086114                                   
+   000068                    MOVE IR-BAL TO IL-BAL                                        00086211                                   
+   000069                    MOVE IR-INTRATE TO IL-INTRATE                                00086311                                   
+   000070                    MOVE IR-MEMSIN TO IL-MEMSIN                                  00086415                                   
+   000071                    MOVE IL-INV-LIST TO INV-LIST                                 00086514                                   
+   000072                    WRITE INV-LIST                                               00086614                                   
+   000073                        AFTER ADVANCING 2 LINES                                  00086711                                   
+   000074                                                                                 00086806                                   
+   000075                    .                                                            00086914                                   
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               BANKDATA  Date 10/03/2017  Time 21:19:12   Page     5                
+0LineID  Message code  Message text                                                                                                  
+                                                                                                                                     
+     14  IGYGR1216-I   A "RECORDING MODE" of "F" was assumed for file "INV-FILE".                                                    
+                                                                                                                                     
+     16  IGYGR1216-I   A "RECORDING MODE" of "F" was assumed for file "INV-RPT".                                                     
+-Messages    Total    Informational    Warning    Error    Severe    Terminating                                                     
+0Printed:       2           2                                                                                                        
+-* Statistics for COBOL program BANKDATA:                                                                                            
+ *    Source records = 75                                                                                                            
+ *    Data Division statements = 20                                                                                                  
+ *    Procedure Division statements = 17                                                                                             
+0End of compilation 1,  program BANKDATA,  highest severity 0.                                                                       
+0Return code 0                                                                                                                       
+0     Bill    Gates      S  38951991  $ 7916646.19  8.888  1914
+0     Bob     Hope       C  34757570  $ 7607529.15  2.372  1990
+0     Brad    Pitt       C  81528396  $ 5567868.09  8.966  1936
+0     Sue     King       S  58876477  $21670299.00  9.650  2016
+0     Karen   Kingsman   C  85022320  $  495015.11  7.697  1927
+0     Jeff    Foxworthy  S  87933090  $ 8970954.83  9.938  1987
+0     Hal     Jordan     S  71808883  $ 7685591.16  0.960  1942
+0     Gerald  Ford       S  28410574  $ 4238778.98  6.254  1965
+0     Hannah  Martin     S  74059204  $ 5115940.48  7.663  1959
+0     Carol   Kline      C  38502041  $ 1450091.70  0.283  1973
+0     Ali     Sanchez    C  51392965  $ 8940778.53  8.256  2009
+0     Joe     King       S  81168472  $73398044.82  3.558  1935
+0     Tom     Cruise     S  81111366  $ 5506163.99  2.592  2001
+0     Nick    Jonas      C  37919367  $96950443.99  8.100  1966
+0     Harry   Potter     S  41572681  $ 6125158.44  6.819  1964
+0     Jen     Aniston    S  19653373  $ 8601622.71  4.176  2004
+0     Chris   Pratt      C  81513647  $ 2022450.81  6.566  1957
+0     Chris   Brown      C  29994591  $ 8761511.21  2.277  1945
+0     Sam     Hunt       C  52341797  $ 2455077.47  7.262  1935
+0     Bailey  Bradford   S  79650216  $ 7246834.50  8.427  1941
+0     Kelly   Smith      C  60721280  $ 3410436.07  2.445  1944
+0     Amanda  Thomas     C  78249307  $ 2375504.46  4.335  1983
+0     Cindy   Crawford   S  67228905  $ 7830057.47  7.831  1933
+0     Sarah   Sloan      C  70833663  $ 4154164.83  4.596  2003
+0     Betty   White      S  78158876  $  580329.66  3.080  2010

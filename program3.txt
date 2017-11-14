@@ -1,0 +1,404 @@
+1                    J E S 2  J O B  L O G  --  S Y S T E M  S 0 W 1  --  N O D E  Z O S K C T R         
+0 
+ 18.44.56 JOB01893 ---- MONDAY,    13 NOV 2017 ----
+ 18.44.56 JOB01893  IRR010I  USERID KC03KCE  IS ASSIGNED TO THIS JOB.
+ 18.44.56 JOB01893  IEF677I WARNING MESSAGE(S) FOR JOB KC03KCEX ISSUED
+ 18.44.56 JOB01893  ICH70001I KC03KCE  LAST ACCESS AT 18:44:13 ON MONDAY, NOVEMBER 13, 2017
+ 18.44.56 JOB01893  $HASP373 KC03KCEX STARTED - INIT 2    - CLASS A        - SYS S0W1
+ 18.44.57 JOB01893  -                                         --TIMINGS (MINS.)--            ----PAGING COUNTS---
+ 18.44.57 JOB01893  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP    TCB    SRB  CLOCK   SERV  PG   PAGE   SWAP    VIO SWAPS
+ 18.44.57 JOB01893  -KC03KCEX                      00    457 ******    .00     .0   1019   0      0      0      0     0
+ 18.44.57 JOB01893  -KC03KCEX                      00    188 ******    .00     .0    608   0      0      0      0     0
+ 18.44.57 JOB01893  -KC03KCEX                      00    121 ******    .00     .0    404   0      0      0      0     0
+ 18.44.57 JOB01893  -KC03KCEX ENDED.  NAME-GODLEWSKI            TOTAL TCB CPU TIME=   .00  TOTAL ELAPSED TIME=    .0
+ 18.44.57 JOB01893  $HASP395 KC03KCEX ENDED
+0------ JES2 JOB STATISTICS ------
+-  13 NOV 2017 JOB EXECUTION DATE
+-          225 CARDS READ
+-          404 SYSOUT PRINT RECORDS
+-            0 SYSOUT PUNCH RECORDS
+-           31 SYSOUT SPOOL KBYTES
+-         0.01 MINUTES EXECUTION TIME
+         1 //KC03KCEX JOB 2,GODLEWSKI,LINES=(5,CANCEL),NOTIFY=KC03KCE,             JOB01893
+           // MSGLEVEL=(2,0),MSGCLASS=A                                            00020000
+         2 //STEP2 EXEC PROC=IGYWCLG,LNGPRFX='IGY420',                             00030000
+           // PARM.COBOL='NOX'                                                     00040000
+        26 //SYSIN DD *                                                            00050000
+        30 //LKED.SYSPRINT DD DUMMY                                                00102420
+        41 //GO.CUSTIN DD DSN=KC02580.P3G11.DAT,DISP=SHR                           00102520
+        42 //GO.CUSTRPT DD SYSOUT=A                                                00103004
+        43 //GO.SYSOUT DD SYSOUT=A                                                 00110000
+  STMT NO. MESSAGE
+         2 IEFC001I PROCEDURE IGYWCLG WAS EXPANDED USING SYSTEM LIBRARY USER.PROCLIB
+        35 IEF686I DDNAME REFERRED TO ON DDNAME KEYWORD IN PRIOR STEP WAS NOT RESOLVED 
+ ICH70001I KC03KCE  LAST ACCESS AT 18:44:13 ON MONDAY, NOVEMBER 13, 2017
+ IEF142I KC03KCEX COBOL STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/COBOL   /START 2017317.1844
+ IEF032I STEP/COBOL   /STOP  2017317.1844 
+         CPU:     0 HR  00 MIN  00.03 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+         VIRT:  8896K  SYS:   308K  EXT:  1580072K  SYS:    11524K
+         ATB- REAL:                    24K  SLOTS:                     0K
+              VIRT- ALLOC:       4M SHRD:       0M
+ IEF142I KC03KCEX LKED STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/LKED    /START 2017317.1844
+ IEF032I STEP/LKED    /STOP  2017317.1844 
+         CPU:     0 HR  00 MIN  00.02 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+         VIRT:    88K  SYS:   292K  EXT:     1640K  SYS:    11468K
+         ATB- REAL:                     0K  SLOTS:                     0K
+              VIRT- ALLOC:       0M SHRD:       0M
+ IEF142I KC03KCEX GO STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/GO      /START 2017317.1844
+ IEF032I STEP/GO      /STOP  2017317.1844 
+         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+         VIRT:   120K  SYS:   384K  EXT:     2940K  SYS:    11520K
+         ATB- REAL:                     0K  SLOTS:                     0K
+              VIRT- ALLOC:       0M SHRD:       0M
+ IEF375I  JOB/KC03KCEX/START 2017317.1844
+ IEF033I  JOB/KC03KCEX/STOP  2017317.1844 
+         CPU:     0 HR  00 MIN  00.06 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0                         Date 11/13/2017  Time 18:44:56   Page     1                
+0Invocation parameters:                                                                                                              
+  NOX                                                                                                                                
+0Options in effect:                                                                                                                  
+  NOADATA                                                                                                                            
+    ADV                                                                                                                              
+    QUOTE                                                                                                                            
+    ARITH(COMPAT)                                                                                                                    
+  NOAWO                                                                                                                              
+  NOBLOCK0                                                                                                                           
+    BUFSIZE(4096)                                                                                                                    
+  NOCICS                                                                                                                             
+    CODEPAGE(1140)                                                                                                                   
+  NOCOMPILE(S)                                                                                                                       
+  NOCURRENCY                                                                                                                         
+    DATA(31)                                                                                                                         
+  NODATEPROC                                                                                                                         
+    DBCS                                                                                                                             
+  NODECK                                                                                                                             
+  NODIAGTRUNC                                                                                                                        
+  NODLL                                                                                                                              
+  NODUMP                                                                                                                             
+  NODYNAM                                                                                                                            
+  NOEXIT                                                                                                                             
+  NOEXPORTALL                                                                                                                        
+  NOFASTSRT                                                                                                                          
+    FLAG(I,I)                                                                                                                        
+  NOFLAGMIG4                                                                                                                         
+  NOFLAGSTD                                                                                                                          
+    INTDATE(ANSI)                                                                                                                    
+    LANGUAGE(EN)                                                                                                                     
+  NOLIB                                                                                                                              
+    LINECOUNT(60)                                                                                                                    
+  NOLIST                                                                                                                             
+  NOMAP                                                                                                                              
+  NOMDECK                                                                                                                            
+  NONAME                                                                                                                             
+    NSYMBOL(NATIONAL)                                                                                                                
+  NONUMBER                                                                                                                           
+    NUMPROC(NOPFD)                                                                                                                   
+    OBJECT                                                                                                                           
+  NOOFFSET                                                                                                                           
+  NOOPTIMIZE                                                                                                                         
+    OUTDD(SYSOUT)                                                                                                                    
+    PGMNAME(COMPAT)                                                                                                                  
+    RENT                                                                                                                             
+    RMODE(AUTO)                                                                                                                      
+    SEQUENCE                                                                                                                         
+    SIZE(MAX)                                                                                                                        
+    SOURCE                                                                                                                           
+    SPACE(1)                                                                                                                         
+  NOSQL                                                                                                                              
+    SQLCCSID                                                                                                                         
+  NOSSRANGE                                                                                                                          
+  NOTERM                                                                                                                             
+  NOTEST                                                                                                                             
+  NOTHREAD                                                                                                                           
+    TRUNC(STD)                                                                                                                       
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0                         Date 11/13/2017  Time 18:44:56   Page     2                
+0 NOVBREF                                                                                                                            
+  NOWORD                                                                                                                             
+    XMLPARSE(XMLSS)                                                                                                                  
+  NOXREF                                                                                                                             
+    YEARWINDOW(1900)                                                                                                                 
+    ZWB                                                                                                                              
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               BANKNUM   Date 11/13/2017  Time 18:44:56   Page     3                
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference           
+0  000001                IDENTIFICATION DIVISION.                                         00060003                                   
+   000002                PROGRAM-ID. BANKNUM.                                             00061008                                   
+   000003               * WRITTEN BY WENDY M GODLEWSKI                                    00062004                                   
+   000004               * 11/08/2017                                                      00063016                                   
+   000005                ENVIRONMENT DIVISION.                                            00064003                                   
+   000006                INPUT-OUTPUT SECTION.                                            00065003                                   
+   000007                FILE-CONTROL.                                                    00066003                                   
+   000008                    SELECT CUST-FILE                                             00067009                                   
+   000009                        ASSIGN TO CUSTIN.                                        00068009                                   
+   000010                    SELECT CUST-RPT                                              00070003                                   
+   000011                        ASSIGN TO CUSTRPT.                                       00071009                                   
+   000012                DATA DIVISION.                                                   00072003                                   
+   000013                FILE SECTION.                                                    00073003                                   
+   000014                FD CUST-FILE.                                                    00074009                                   
+                                                                                                                                     
+ ==000014==> IGYGR1216-I A "RECORDING MODE" of "F" was assumed for file "CUST-FILE".                                                 
+                                                                                                                                     
+   000015                01 CUST-RECORD     PIC X(43).                                    00075016                                   
+   000016                FD CUST-RPT.                                                     00076003                                   
+                                                                                                                                     
+ ==000016==> IGYGR1216-I A "RECORDING MODE" of "F" was assumed for file "CUST-RPT".                                                  
+                                                                                                                                     
+   000017                01 CUST-LIST       PIC X(83).                                    00077018                                   
+   000018                WORKING-STORAGE SECTION.                                         00078003                                   
+   000019                01  WS-SWITCHES.                                                 00079003                                   
+   000020                    05 WS1-EOF              PIC X.                               00079121                                   
+   000021                       88  WS1-END-OF-FILE  VALUE 'E'.                           00079221                                   
+   000022                       88  WS1-NOT-EOF      VALUE 'N'.                           00079321                                   
+   000023                    05 WS2-FR               PIC X.                               00079421                                   
+   000024                       88  WS2-FIRST-RECORD VALUE 'F'.                           00079521                                   
+   000025                       88  WS2-NOT-FR       VALUE 'N'.                           00079621                                   
+   000026                01  WS-TODAYS-DATE.                                              00079713                                   
+   000027                    05 MONTH       PIC 9(2).                                     00079813                                   
+   000028                    05 FILLER      PIC X(1) VALUE '/'.                           00079913                                   
+   000029                    05 NUM         PIC 9(2).                                     00080013                                   
+   000030                    05 FILLER      PIC X(1) VALUE '/'.                           00080113                                   
+   000031                    05 YEAR        PIC 9(4).                                     00080213                                   
+   000032                01  AC-TOTAL-ACCUMULATORS.                                       00080318                                   
+   000033                    05 AC-TOTAL-ACCTTYPE    PIC 9(2).                            00080425                                   
+   000034                    05 AC-TOTAL-INT-RATE    PIC 9(2).                            00080525                                   
+   000035                    05 AC-TOTAL-ACCOUNTS    PIC 9(2).                            00080625                                   
+   000036                01  RC-REPORT-CONTROLS.                                          00080720                                   
+   000037                    05 RC-PAGE-COUNT        PIC 9(4).                            00080821                                   
+   000038                    05 RC-LINES-PER-PAGE    PIC 9(2) VALUE 34.                   00080921                                   
+   000039                    05 RC-LINES-USED        PIC 9(2).                            00081021                                   
+   000040                    05 RC-LINE-SPACING      PIC 9(2).                            00081121                                   
+   000041                    05 RC-PREVIOUS-ACCTTYPE   PIC X(2).                          00081219                                   
+   000042                    05 RC-PREVIOUS-INT-RATE   PIC 9V999.                         00081319                                   
+   000043                01  HEADING-1.                                                   00081614                                   
+   000044                    05             PIC X(14) VALUE SPACES.                       00081724                                   
+   000045                    05             PIC X(25) VALUE 'JBSW BANK ACCOUNT DETAILS'.  00081824                                   
+   000046                01 HEADING-2.                                                    00083019                                   
+   000047                    05 PIC X(1) VALUE SPACES.                                    00083119                                   
+   000048                    05 PIC X(9) VALUE 'ACCT TYPE'.                               00083219                                   
+   000049                    05 PIC X(3) VALUE SPACES.                                    00083321                                   
+   000050                    05 PIC X(8) VALUE 'INT RATE'.                                00083420                                   
+   000051                    05 PIC X(5) VALUE SPACES.                                    00083521                                   
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               BANKNUM   Date 11/13/2017  Time 18:44:56   Page     4                
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference           
+0  000052                    05 PIC X(4) VALUE 'NAME'.                                    00083619                                   
+   000053                    05 PIC X(8) VALUE SPACES.                                    00083721                                   
+   000054                    05 PIC X(11) VALUE 'ACCT NUMBER'.                            00083820                                   
+   000055                01 HL-HEADING-DETAIL-LINE.                                       00083921                                   
+   000056                    05 PIC X(1) VALUE SPACES.                                    00084019                                   
+   000057                    05 HL-ACCTTYPE    PIC X(8).                                  00084121                                   
+   000058                    05 PIC X(5) VALUE SPACES.                                    00084221                                   
+   000059                    05 HL-INT-RATE    PIC 9.999.                                 00084321                                   
+   000060                    05 PIC X(3) VALUE SPACES.                                    00084421                                   
+   000061                    05 HL-LAST        PIC X(9).                                  00084521                                   
+   000062                    05 PIC X(1) VALUE SPACES.                                    00084621                                   
+   000063                    05 HL-FIRST       PIC X(6).                                  00084721                                   
+   000064                    05 PIC X(1) VALUE SPACES.                                    00084821                                   
+   000065                    05 HL-ACCT-NUM    PIC 9(8).                                  00084921                                   
+   000066                01 CT-CONTROL-TOTAL-SECTION.                                     00085120                                   
+   000067                    05 PIC X(16) VALUE SPACES.                                   00085221                                   
+   000068                    05 CT-TOTAL-DESC      PIC X(27).                             00085322                                   
+   000069                    05 CT-TOTAL-INT-RATE  PIC Z9.                                00085425                                   
+   000070                01 IR-CUST-RECORD.                                               00085519                                   
+   000071                    05 IR-FIRST    PIC X(6).                                     00085607                                   
+   000072                    05 IR-LAST     PIC X(9).                                     00085703                                   
+   000073                    05 IR-ACCTTYPE PIC X(2).                                     00085818                                   
+   000074                    05 IR-ACCT-NUM PIC 9(8).                                     00085903                                   
+   000075                    05 IR-BAL      PIC 99999999V99.                              00086021                                   
+   000076                    05 IR-INT-RATE PIC 9V999.                                    00086105                                   
+   000077                    05 IR-MBR-YEAR PIC 9(4).                                     00086221                                   
+   000078                PROCEDURE DIVISION.                                              00086703                                   
+   000079                100-HOUSEKEEPING.                                                00086803                                   
+   000080                    OPEN INPUT CUST-FILE                                         00086903                                   
+   000081                         OUTPUT CUST-RPT                                         00087003                                   
+   000082                    PERFORM 110-INITIALIZE-VARIABLES                             00087118                                   
+   000083                    PERFORM 150-DATE                                             00087213                                   
+   000084                    PERFORM UNTIL WS1-END-OF-FILE                                00087321                                   
+   000085      1                READ CUST-FILE                                            00087503                                   
+   000086      1                    INTO IR-CUST-RECORD                                   00087603                                   
+   000087      1                  AT END                                                  00087703                                   
+   000088      2                     SET WS1-END-OF-FILE TO TRUE                          00087821                                   
+   000089      2                     PERFORM 300-PROCESS-BREAK                            00087918                                   
+   000090      1                  NOT AT END                                              00088003                                   
+   000091      2                     PERFORM 300-PROCESS-BREAK                            00088118                                   
+   000092      2                     PERFORM 200-PROCESS-DETAIL                           00088221                                   
+   000093      1                END-READ                                                  00088303                                   
+   000094                    END-PERFORM                                                  00088403                                   
+   000095                    CLOSE CUST-FILE                                              00088503                                   
+   000096                          CUST-RPT                                               00088603                                   
+   000097                    STOP RUN                                                     00088703                                   
+   000098                    .                                                            00088803                                   
+   000099                110-INITIALIZE-VARIABLES.                                        00088919                                   
+   000100                    SET WS1-NOT-EOF TO TRUE                                      00089021                                   
+   000101                    SET WS2-FIRST-RECORD TO TRUE                                 00089121                                   
+   000102                    INITIALIZE AC-TOTAL-ACCUMULATORS                             00089219                                   
+   000103                               RC-PAGE-COUNT                                     00089321                                   
+   000104                    .                                                            00089418                                   
+   000105                150-DATE.                                                        00089513                                   
+   000106                    MOVE FUNCTION CURRENT-DATE(5:2) TO MONTH                     00089613                                   
+   000107                    MOVE FUNCTION CURRENT-DATE(7:2) TO NUM                       00089713                                   
+   000108                    MOVE FUNCTION CURRENT-DATE(1:4) TO YEAR                      00089813                                   
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               BANKNUM   Date 11/13/2017  Time 18:44:56   Page     5                
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference           
+0  000109                    MOVE WS-TODAYS-DATE TO CUST-LIST                             00089913                                   
+   000110                    WRITE CUST-LIST                                              00090013                                   
+   000111                    .                                                            00090113                                   
+   000112                200-PROCESS-DETAIL.                                              00090221                                   
+   000113                    IF RC-LINES-USED >= RC-LINES-PER-PAGE                        00090321                                   
+   000114      1                PERFORM 400-PRINT-HEADINGS                                00090421                                   
+   000115                    END-IF                                                       00090521                                   
+   000116                    PERFORM 510-PRINT-DETAIL-LINE                                00090621                                   
+   000117                    ADD 1 TO AC-TOTAL-INT-RATE                                   00090725                                   
+   000118                    INITIALIZE HL-ACCTTYPE                                       00090921                                   
+   000119                                                                                 00091025                                   
+   000120                    .                                                            00091103                                   
+   000121                250-HEADINGS.                                                    00091219                                   
+   000122                    MOVE HEADING-1 TO CUST-LIST                                  00091314                                   
+   000123                    WRITE CUST-LIST                                              00091414                                   
+   000124                       AFTER ADVANCING PAGE                                      00091521                                   
+   000125                    MOVE 1 TO RC-LINES-USED                                      00091621                                   
+   000126                    MOVE HEADING-2 TO CUST-LIST                                  00091714                                   
+   000127                    MOVE 1 TO RC-LINE-SPACING                                    00091821                                   
+   000128                    WRITE CUST-LIST                                              00091914                                   
+   000129                       AFTER ADVANCING RC-LINE-SPACING                           00092021                                   
+   000130                    ADD RC-LINE-SPACING TO RC-LINES-USED                         00092121                                   
+   000131                    .                                                            00092414                                   
+   000132                300-PROCESS-BREAK.                                               00092518                                   
+   000133                    EVALUATE TRUE                                                00092621                                   
+   000134                      WHEN WS2-FIRST-RECORD                                      00092721                                   
+   000135      1                 MOVE IR-INT-RATE                                         00092819                                   
+   000136      1                   TO RC-PREVIOUS-INT-RATE                                00092919                                   
+   000137      1                      HL-INT-RATE                                         00093019                                   
+   000138      1                 MOVE IR-ACCTTYPE TO RC-PREVIOUS-ACCTTYPE                 00093119                                   
+   000139      1                                     HL-ACCTTYPE                          00093219                                   
+   000140      1                 PERFORM 400-PRINT-HEADINGS                               00093321                                   
+   000141      1                 SET WS2-NOT-FR TO TRUE                                   00093421                                   
+   000142                    WHEN IR-ACCTTYPE NOT = RC-PREVIOUS-ACCTTYPE                  00093521                                   
+   000143      1                 PERFORM 410-PROCESS-END-OF-INT-RATE                      00093619                                   
+   000144      1                 PERFORM 420-PROCESS-END-OF-ACCTTYPE                      00093719                                   
+   000145                    WHEN IR-INT-RATE NOT = RC-PREVIOUS-INT-RATE                  00093821                                   
+   000146      1                 PERFORM 410-PROCESS-END-OF-INT-RATE                      00093919                                   
+   000147                    WHEN WS1-END-OF-FILE                                         00094021                                   
+   000148      1                 PERFORM 410-PROCESS-END-OF-INT-RATE                      00094119                                   
+   000149      1                 PERFORM 420-PROCESS-END-OF-ACCTTYPE                      00094219                                   
+   000150      1                 PERFORM 500-PRINT-REPORT-TOTAL-LINE                      00094319                                   
+   000151                    END-EVALUATE                                                 00094421                                   
+   000152                    .                                                            00094519                                   
+   000153                400-PRINT-HEADINGS.                                              00095219                                   
+   000154                    ADD 1 TO RC-PAGE-COUNT                                       00095321                                   
+   000155                    EVALUATE TRUE                                                00095519                                   
+   000156                      WHEN IR-ACCTTYPE = 'C'                                     00095621                                   
+   000157      1                 MOVE 'CHECKING' TO HL-ACCTTYPE                           00095721                                   
+   000158                      WHEN IR-ACCTTYPE = 'S'                                     00095821                                   
+   000159      1                 MOVE 'SAVINGS ' TO HL-ACCTTYPE                           00095921                                   
+   000160                    END-EVALUATE                                                 00096020                                   
+   000161                    PERFORM 250-HEADINGS                                         00096121                                   
+   000162                    MOVE 2 TO RC-LINE-SPACING                                    00096321                                   
+   000163                    .                                                            00096419                                   
+   000164                410-PROCESS-END-OF-INT-RATE.                                     00096519                                   
+   000165                    MOVE 'TOTAL FOR INTEREST RATE: ' TO CT-TOTAL-DESC            00096622                                   
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               BANKNUM   Date 11/13/2017  Time 18:44:56   Page     6                
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference           
+0  000166                    MOVE AC-TOTAL-INT-RATE TO CT-TOTAL-INT-RATE                  00096822                                   
+   000167                    MOVE CT-CONTROL-TOTAL-SECTION TO CUST-LIST                   00096919                                   
+   000168                    MOVE 2 TO RC-LINE-SPACING                                    00097021                                   
+   000169                      WRITE CUST-LIST                                            00097119                                   
+   000170                        AFTER ADVANCING RC-LINE-SPACING                          00097221                                   
+   000171                      ADD RC-LINE-SPACING TO RC-LINES-USED                       00097321                                   
+   000172                    MOVE 2 TO RC-LINE-SPACING                                    00097421                                   
+   000173                    ADD AC-TOTAL-INT-RATE TO AC-TOTAL-ACCTTYPE                   00097519                                   
+   000174                    IF WS1-NOT-EOF                                               00097621                                   
+   000175      1               MOVE IR-INT-RATE TO RC-PREVIOUS-INT-RATE                   00097721                                   
+   000176      1               MOVE ZEROS TO AC-TOTAL-INT-RATE                            00097819                                   
+   000177      1               MOVE IR-INT-RATE TO HL-INT-RATE                            00097921                                   
+   000178                    END-IF                                                       00098019                                   
+   000179                    .                                                            00098119                                   
+   000180                420-PROCESS-END-OF-ACCTTYPE.                                     00098220                                   
+   000181                    MOVE 'TOTAL FOR ACCT TYPE: ' TO CT-TOTAL-DESC                00098322                                   
+   000182                    MOVE AC-TOTAL-ACCTTYPE TO CT-TOTAL-INT-RATE                  00098419                                   
+   000183                    MOVE CT-CONTROL-TOTAL-SECTION TO CUST-LIST                   00098519                                   
+   000184                    MOVE 2 TO RC-LINE-SPACING                                    00098621                                   
+   000185                      WRITE CUST-LIST                                            00098719                                   
+   000186                        AFTER ADVANCING RC-LINE-SPACING                          00098821                                   
+   000187                      ADD RC-LINE-SPACING TO RC-LINES-USED                       00098921                                   
+   000188                    MOVE 2 TO RC-LINE-SPACING                                    00099021                                   
+   000189                    ADD AC-TOTAL-ACCTTYPE TO AC-TOTAL-ACCOUNTS                   00099125                                   
+   000190                    IF WS1-NOT-EOF                                               00099221                                   
+   000191      1               MOVE IR-ACCTTYPE TO RC-PREVIOUS-ACCTTYPE                   00099321                                   
+   000192      1               MOVE ZEROS TO AC-TOTAL-ACCTTYPE                            00099419                                   
+   000193      1               MOVE RC-LINES-PER-PAGE TO RC-LINES-USED                    00099521                                   
+   000194      1               MOVE IR-ACCTTYPE TO HL-ACCTTYPE                            00099621                                   
+   000195      1               PERFORM 400-PRINT-HEADINGS                                 00099721                                   
+   000196                    END-IF                                                       00099819                                   
+   000197                    .                                                            00099919                                   
+   000198                500-PRINT-REPORT-TOTAL-LINE.                                     00100019                                   
+   000199                    MOVE 'ACCOUNTS TOTAL: ' TO CT-TOTAL-DESC                     00100122                                   
+   000200                    MOVE AC-TOTAL-ACCOUNTS TO CT-TOTAL-INT-RATE                  00100325                                   
+   000201                    MOVE CT-CONTROL-TOTAL-SECTION TO CUST-LIST                   00100421                                   
+   000202                    MOVE 3 TO RC-LINE-SPACING                                    00100521                                   
+   000203                    WRITE CUST-LIST                                              00100619                                   
+   000204                       AFTER ADVANCING RC-LINE-SPACING                           00100721                                   
+   000205                    ADD RC-LINE-SPACING TO RC-LINES-USED                         00100821                                   
+   000206                    .                                                            00100919                                   
+   000207                510-PRINT-DETAIL-LINE.                                           00101021                                   
+   000208                    MOVE IR-LAST TO HL-LAST                                      00101521                                   
+   000209                    MOVE IR-FIRST TO HL-FIRST                                    00101621                                   
+   000210                    MOVE IR-ACCT-NUM TO HL-ACCT-NUM                              00101721                                   
+   000211                    MOVE HL-HEADING-DETAIL-LINE TO CUST-LIST                     00101821                                   
+   000212                    WRITE CUST-LIST                                              00101921                                   
+   000213                      AFTER ADVANCING RC-LINE-SPACING                            00102021                                   
+   000214                    ADD RC-LINE-SPACING TO RC-LINES-USED                         00102121                                   
+   000215                    MOVE 1 TO RC-LINE-SPACING                                    00102221                                   
+   000216                    .                                                            00102321                                   
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               BANKNUM   Date 11/13/2017  Time 18:44:56   Page     7                
+0LineID  Message code  Message text                                                                                                  
+                                                                                                                                     
+     14  IGYGR1216-I   A "RECORDING MODE" of "F" was assumed for file "CUST-FILE".                                                   
+                                                                                                                                     
+     16  IGYGR1216-I   A "RECORDING MODE" of "F" was assumed for file "CUST-RPT".                                                    
+-Messages    Total    Informational    Warning    Error    Severe    Terminating                                                     
+0Printed:       2           2                                                                                                        
+-* Statistics for COBOL program BANKNUM:                                                                                             
+ *    Source records = 216                                                                                                           
+ *    Data Division statements = 43                                                                                                  
+ *    Procedure Division statements = 87                                                                                             
+0End of compilation 1,  program BANKNUM,  highest severity 0.                                                                        
+0Return code 0                                                                                                                       
+ 11/13/2017                                                                         
+1              JBSW BANK ACCOUNT DETAILS                                            
+  ACCT TYPE   INT RATE     NAME        ACCT NUMBER                                  
+0 CHECKING     0.010   Sanchez   Ali    51392965                                    
+               0.010   Pratt     Chris  81513647                                    
+               0.010   Jonas     Nick   37919367                                    
+               0.010   Sloan     Sarah  70833663                                    
+               0.010   Hunt      Sam    52341797                                    
+0                TOTAL FOR INTEREST RATE:    5                                      
+0              0.015   Thomas    Amanda 78249307                                    
+               0.015   Pitt      Brad   81528396                                    
+               0.015   Hope      Bob    34757570                                    
+               0.015   Brown     Chris  29994591                                    
+               0.015   Kline     Carol  38502041                                    
+               0.015   Smith     Kelly  60721280                                    
+               0.015   Kingsman  Karen  85022320                                    
+0                TOTAL FOR INTEREST RATE:    7                                      
+0                TOTAL FOR ACCT TYPE:       12                                      
+1              JBSW BANK ACCOUNT DETAILS                                            
+  ACCT TYPE   INT RATE     NAME        ACCT NUMBER                                  
+0 SAVINGS      0.100   White     Betty  78158876                                    
+               0.100   Crawford  Cindy  67228905                                    
+               0.100   Aniston   Jen    19653373                                    
+               0.100   King      Sue    58876477                                    
+               0.100   Cruise    Tom    81111366                                    
+0                TOTAL FOR INTEREST RATE:    5                                      
+0              0.150   Gates     Bill   38951991                                    
+               0.150   Bradford  Bailey 79650216                                    
+               0.150   Ford      Gerald 28410574                                    
+               0.150   Jordan    Hal    71808883                                    
+               0.150   Potter    Harry  41572681                                    
+               0.150   Martin    Hannah 74059204                                    
+               0.150   King      Joe    81168472                                    
+               0.150   Foxworthy Jeff   87933090                                    
+0                TOTAL FOR INTEREST RATE:    8                                      
+0                TOTAL FOR ACCT TYPE:       13                                      
+-                ACCOUNTS TOTAL:            25                                      

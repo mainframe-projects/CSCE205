@@ -4,6 +4,6 @@
 
   Fall 2017
 
-  Instructor: Dr. Chris Brown
+  Instructor: Dr. Christine Brown
 
 <h3> COBOL Output Files </h3>

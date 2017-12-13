@@ -1,0 +1,1086 @@
+1                    J E S 2  J O B  L O G  --  S Y S T E M  S 0 W 1  --  N O D E  Z O S K C T R         
+0 
+ 18.25.28 JOB08981 ---- WEDNESDAY, 06 DEC 2017 ----
+ 18.25.28 JOB08981  IRR010I  USERID KC03KCE  IS ASSIGNED TO THIS JOB.
+ 18.25.28 JOB08981  IEF677I WARNING MESSAGE(S) FOR JOB KC03KCEX ISSUED
+ 18.25.28 JOB08981  ICH70001I KC03KCE  LAST ACCESS AT 18:17:53 ON WEDNESDAY, DECEMBER 6, 2017
+ 18.25.28 JOB08981  $HASP373 KC03KCEX STARTED - INIT 2    - CLASS A        - SYS S0W1
+ 18.25.28 JOB08981  -                                         --TIMINGS (MINS.)--            ----PAGING COUNTS---
+ 18.25.28 JOB08981  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP    TCB    SRB  CLOCK   SERV  PG   PAGE   SWAP    VIO SWAPS
+ 18.25.28 JOB08981  -KC03KCEX                      00    468 ******    .00     .0   1033   0      0      0      0     0
+ 18.25.29 JOB08981  -KC03KCEX                      00    191 ******    .00     .0    599   0      0      0      0     0
+ 18.25.29 JOB08981  -KC03KCEX                      00    292 ******    .00     .0    522   0      0      0      0     0
+ 18.25.29 JOB08981  -KC03KCEX ENDED.  NAME-GODLEWSKI            TOTAL TCB CPU TIME=   .00  TOTAL ELAPSED TIME=    .0
+ 18.25.29 JOB08981  $HASP395 KC03KCEX ENDED
+0------ JES2 JOB STATISTICS ------
+-  06 DEC 2017 JOB EXECUTION DATE
+-          290 CARDS READ
+-          562 SYSOUT PRINT RECORDS
+-            0 SYSOUT PUNCH RECORDS
+-           40 SYSOUT SPOOL KBYTES
+-         0.01 MINUTES EXECUTION TIME
+         1 //KC03KCEX JOB 2,GODLEWSKI,LINES=(5,CANCEL),NOTIFY=KC03KCE,             JOB08981
+           // MSGLEVEL=(2,0),MSGCLASS=A                                            00020000
+         2 //STEP2 EXEC PROC=IGYWCLG,LNGPRFX='IGY420',                             00030000
+           // PARM.COBOL='NOX'                                                     00040000
+        26 //SYSIN DD *                                                            00050000
+        30 //LKED.SYSPRINT DD DUMMY                                                00105100
+        41 //GO.CUSTIN DD DSN=KC02580.P5G11M.DAT,DISP=SHR                          00105222
+        42 //GO.TRANSIN DD DSN=KC02580.P5G11T.DAT,DISP=SHR                         00105322
+        43 //GO.CUSTOUT DD SYSOUT=A                                                00105420
+        44 //GO.CUSTRPT DD SYSOUT=A                                                00106020
+        45 //GO.ERROROUT DD SYSOUT=A                                               00110020
+        46 //GO.SYSOUT DD SYSOUT=A                                                 00120020
+  STMT NO. MESSAGE
+         2 IEFC001I PROCEDURE IGYWCLG WAS EXPANDED USING SYSTEM LIBRARY USER.PROCLIB
+        35 IEF686I DDNAME REFERRED TO ON DDNAME KEYWORD IN PRIOR STEP WAS NOT RESOLVED 
+ ICH70001I KC03KCE  LAST ACCESS AT 18:17:53 ON WEDNESDAY, DECEMBER 6, 2017
+ IEF142I KC03KCEX COBOL STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/COBOL   /START 2017340.1825
+ IEF032I STEP/COBOL   /STOP  2017340.1825 
+         CPU:     0 HR  00 MIN  00.03 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+         VIRT:  8872K  SYS:   308K  EXT:  1579020K  SYS:    11664K
+         ATB- REAL:                    24K  SLOTS:                     0K
+              VIRT- ALLOC:       4M SHRD:       0M
+ IEF142I KC03KCEX LKED STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/LKED    /START 2017340.1825
+ IEF032I STEP/LKED    /STOP  2017340.1825 
+         CPU:     0 HR  00 MIN  00.02 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+         VIRT:    88K  SYS:   300K  EXT:     1640K  SYS:    11608K
+         ATB- REAL:                     0K  SLOTS:                     0K
+              VIRT- ALLOC:       0M SHRD:       0M
+ IEF142I KC03KCEX GO STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/GO      /START 2017340.1825
+ IEF032I STEP/GO      /STOP  2017340.1825 
+         CPU:     0 HR  00 MIN  00.02 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+         VIRT:   124K  SYS:   384K  EXT:     2960K  SYS:    11664K
+         ATB- REAL:                     0K  SLOTS:                     0K
+              VIRT- ALLOC:       0M SHRD:       0M
+ IEF375I  JOB/KC03KCEX/START 2017340.1825
+ IEF033I  JOB/KC03KCEX/STOP  2017340.1825 
+         CPU:     0 HR  00 MIN  00.07 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0                         Date 12/06/2017  Time 18:25:28   Page     1                
+0Invocation parameters:                                                                                                              
+  NOX                                                                                                                                
+0Options in effect:                                                                                                                  
+  NOADATA                                                                                                                            
+    ADV                                                                                                                              
+    QUOTE                                                                                                                            
+    ARITH(COMPAT)                                                                                                                    
+  NOAWO                                                                                                                              
+  NOBLOCK0                                                                                                                           
+    BUFSIZE(4096)                                                                                                                    
+  NOCICS                                                                                                                             
+    CODEPAGE(1140)                                                                                                                   
+  NOCOMPILE(S)                                                                                                                       
+  NOCURRENCY                                                                                                                         
+    DATA(31)                                                                                                                         
+  NODATEPROC                                                                                                                         
+    DBCS                                                                                                                             
+  NODECK                                                                                                                             
+  NODIAGTRUNC                                                                                                                        
+  NODLL                                                                                                                              
+  NODUMP                                                                                                                             
+  NODYNAM                                                                                                                            
+  NOEXIT                                                                                                                             
+  NOEXPORTALL                                                                                                                        
+  NOFASTSRT                                                                                                                          
+    FLAG(I,I)                                                                                                                        
+  NOFLAGMIG4                                                                                                                         
+  NOFLAGSTD                                                                                                                          
+    INTDATE(ANSI)                                                                                                                    
+    LANGUAGE(EN)                                                                                                                     
+  NOLIB                                                                                                                              
+    LINECOUNT(60)                                                                                                                    
+  NOLIST                                                                                                                             
+  NOMAP                                                                                                                              
+  NOMDECK                                                                                                                            
+  NONAME                                                                                                                             
+    NSYMBOL(NATIONAL)                                                                                                                
+  NONUMBER                                                                                                                           
+    NUMPROC(NOPFD)                                                                                                                   
+    OBJECT                                                                                                                           
+  NOOFFSET                                                                                                                           
+  NOOPTIMIZE                                                                                                                         
+    OUTDD(SYSOUT)                                                                                                                    
+    PGMNAME(COMPAT)                                                                                                                  
+    RENT                                                                                                                             
+    RMODE(AUTO)                                                                                                                      
+    SEQUENCE                                                                                                                         
+    SIZE(MAX)                                                                                                                        
+    SOURCE                                                                                                                           
+    SPACE(1)                                                                                                                         
+  NOSQL                                                                                                                              
+    SQLCCSID                                                                                                                         
+  NOSSRANGE                                                                                                                          
+  NOTERM                                                                                                                             
+  NOTEST                                                                                                                             
+  NOTHREAD                                                                                                                           
+    TRUNC(STD)                                                                                                                       
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0                         Date 12/06/2017  Time 18:25:28   Page     2                
+0 NOVBREF                                                                                                                            
+  NOWORD                                                                                                                             
+    XMLPARSE(XMLSS)                                                                                                                  
+  NOXREF                                                                                                                             
+    YEARWINDOW(1900)                                                                                                                 
+    ZWB                                                                                                                              
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               MATCHIN   Date 12/06/2017  Time 18:25:28   Page     3                
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference           
+0  000001                IDENTIFICATION DIVISION.                                         00060003                                   
+   000002                PROGRAM-ID. MATCHIN.                                             00061016                                   
+   000003               * GROUP 11 PROJECT 5                                              00062016                                   
+   000004               * 12/11/2017                                                      00063016                                   
+   000005                ENVIRONMENT DIVISION.                                            00064003                                   
+   000006                INPUT-OUTPUT SECTION.                                            00065003                                   
+   000007                FILE-CONTROL.                                                    00066003                                   
+   000008                    SELECT CUST-FILE                                             00067009                                   
+   000009                        ASSIGN TO CUSTIN.                                        00068009                                   
+   000010                    SELECT CUST-TRANS                                            00069021                                   
+   000011                        ASSIGN TO TRANSIN.                                       00069117                                   
+   000012                    SELECT CUST-NEW-MASTER                                       00069221                                   
+   000013                        ASSIGN TO CUSTOUT.                                       00069317                                   
+   000014                    SELECT CUST-RPT                                              00070021                                   
+   000015                        ASSIGN TO CUSTRPT.                                       00071009                                   
+   000016                    SELECT CUST-ERRORS                                           00071121                                   
+   000017                        ASSIGN TO ERROROUT.                                      00071217                                   
+   000018                DATA DIVISION.                                                   00072003                                   
+   000019                FILE SECTION.                                                    00073003                                   
+   000020                FD CUST-FILE.                                                    00074009                                   
+                                                                                                                                     
+ ==000020==> IGYGR1216-I A "RECORDING MODE" of "F" was assumed for file "CUST-FILE".                                                 
+                                                                                                                                     
+   000021                01 CUST-RECORD           PIC X(30).                              00075028                                   
+   000022                FD CUST-TRANS.                                                   00075117                                   
+                                                                                                                                     
+ ==000022==> IGYGR1216-I A "RECORDING MODE" of "F" was assumed for file "CUST-TRANS".                                                
+                                                                                                                                     
+   000023                01 CUST-TRANS-RECORD     PIC X(14).                              00075217                                   
+   000024                FD CUST-NEW-MASTER.                                              00075317                                   
+                                                                                                                                     
+ ==000024==> IGYGR1216-I A "RECORDING MODE" of "F" was assumed for file "CUST-NEW-MASTER".                                           
+                                                                                                                                     
+   000025                01 CUST-NEW-MASTER-LIST  PIC X(30).                              00075428                                   
+   000026                FD CUST-RPT.                                                     00076003                                   
+                                                                                                                                     
+ ==000026==> IGYGR1216-I A "RECORDING MODE" of "F" was assumed for file "CUST-RPT".                                                  
+                                                                                                                                     
+   000027                01 CUST-LIST             PIC X(87).                              00077017                                   
+   000028                FD CUST-ERRORS.                                                  00077117                                   
+                                                                                                                                     
+ ==000028==> IGYGR1216-I A "RECORDING MODE" of "F" was assumed for file "CUST-ERRORS".                                               
+                                                                                                                                     
+   000029                01 CUST-ERRORS-LIST      PIC X(44).                              00077217                                   
+   000030                WORKING-STORAGE SECTION.                                         00078003                                   
+   000031                01  WS-SWITCHES.                                                 00079003                                   
+   000032                    05 MS-EOF                   PIC X.                           00079117                                   
+   000033                       88 MS-MASTER-EOF         VALUE 'E'.                       00079217                                   
+   000034                       88 MS-MASTER-NOT-EOF     VALUE 'N'.                       00079317                                   
+   000035                    05 TS-EOF                   PIC X.                           00079417                                   
+   000036                       88 TS-TRANS-EOF          VALUE 'E'.                       00079517                                   
+   000037                       88 TS-TRANS-NOT-EOF      VALUE 'N'.                       00079617                                   
+   000038                    05 MS-READ-NEW-MSTR         PIC X.                           00079717                                   
+   000039                       88 MS-READ-MSTR          VALUE 'T'.                       00079818                                   
+   000040                       88 MS-NO-READ-MSTR      VALUE 'F'.                        00079924                                   
+   000041                    05 TS-READ-NEW-TRANS        PIC X.                           00080017                                   
+   000042                       88 TS-READ-TRANS         VALUE 'T'.                       00080117                                   
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               MATCHIN   Date 12/06/2017  Time 18:25:28   Page     4                
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference           
+0  000043                       88 TS-DONT-READ-TRANS    VALUE 'F'.                       00080217                                   
+   000044                    05 WS-TRANS-PROC            PIC X.                           00080317                                   
+   000045                       88 WS-TRANS-PROCESS      VALUE 'P'.                       00080417                                   
+   000046                       88 WS-TRANS-DONT-PROCESS VALUE 'N'.                       00080517                                   
+   000047                01  WS-TODAYS-DATE.                                              00080613                                   
+   000048                    05 MONTH       PIC 9(2).                                     00080713                                   
+   000049                    05 FILLER      PIC X(1) VALUE '/'.                           00080813                                   
+   000050                    05 NUM         PIC 9(2).                                     00080913                                   
+   000051                    05 FILLER      PIC X(1) VALUE '/'.                           00081013                                   
+   000052                    05 YEAR        PIC 9(4).                                     00081113                                   
+   000053                01  HEADING-1.                                                   00081214                                   
+   000054                    05     PIC X(29) VALUE SPACES.                               00081318                                   
+   000055                    05     PIC X(29) VALUE 'JBSW MEMBER ACCOUNT STATEMENT'.      00081418                                   
+   000056                01  HEADING-2.                                                   00081614                                   
+   000057                    05     PIC X(4) VALUE SPACES.                                00081718                                   
+   000058                    05     PIC X(4) VALUE 'NAME'.                                00081818                                   
+   000059                    05     PIC X(9) VALUE SPACES.                                00081918                                   
+   000060                    05     PIC X(14) VALUE 'ACCOUNT NUMBER'.                     00082018                                   
+   000061                    05     PIC X(3) VALUE SPACES.                                00082118                                   
+   000062                    05     PIC X(7) VALUE 'BALANCE'.                             00082218                                   
+   000063                01  HEADING-3.                                                   00082318                                   
+   000064                    05     PIC X(6) VALUE SPACES.                                00082418                                   
+   000065                    05     PIC X(6) VALUE 'W OR D'.                              00082518                                   
+   000066                    05     PIC X(8) VALUE SPACES.                                00082627                                   
+   000067                    05     PIC X(6) VALUE 'AMOUNT'.                              00082727                                   
+   000068                01  TL-TOTAL-LINE.                                               00082821                                   
+   000069                    05                PIC X(4) VALUE SPACES.                     00082918                                   
+   000070                    05                PIC X(19) VALUE 'TOTAL TRANSACTIONS:'.     00083027                                   
+   000071                    05 TL-TOTAL-TRANS PIC Z9.                                    00083218                                   
+   000072                    05                PIC X(4) VALUE SPACES.                     00083327                                   
+   000073                    05                PIC X(16) VALUE 'ENDING BALANCE: '.        00083427                                   
+   000074                    05 TL-END-BALANCE PIC $ZZZZZ9.                               00083527                                   
+   000075                01 ARITHMETIC-WORK-AREA.                                         00083615                                   
+   000076                    05 AW-TRANS-COUNTER  PIC 9(2).                               00083718                                   
+   000077                    05 AW-END-BALANCE    PIC 9(7).                               00083818                                   
+   000078                01  IR-CUST-RECORD.                                              00083903                                   
+   000079                    05 IR-ACCT-NUM PIC 9(8).                                     00084018                                   
+   000080                    05 IR-FIRST    PIC X(6).                                     00084107                                   
+   000081                    05 IR-LAST     PIC X(9).                                     00084203                                   
+   000082                    05 IR-BALANCE  PIC 9(7).                                     00084328                                   
+   000083                01  TR-CUST-TRANS-RECORD.                                        00084418                                   
+   000084                    05 TR-ACCT-NUM   PIC 9(8).                                   00084518                                   
+   000085                    05 TR-TRANS-TYPE PIC X(1).                                   00084624                                   
+   000086                    05 TR-AMOUNT     PIC 9(5).                                   00084718                                   
+   000087                01  IL-CUST-LIST.                                                00084803                                   
+   000088                    05 IL-FIRST    PIC X(6).                                     00084903                                   
+   000089                    05             PIC X(1) VALUE SPACES.                        00085015                                   
+   000090                    05 IL-LAST     PIC X(9).                                     00085103                                   
+   000091                    05             PIC X(4) VALUE SPACES.                        00085227                                   
+   000092                    05 IL-ACCT-NUM PIC 9(8).                                     00085304                                   
+   000093                    05             PIC X(7) VALUE SPACES.                        00085427                                   
+   000094                    05 IL-BALANCE  PIC $ZZZZZ9.                                  00085527                                   
+   000095                01  RL-REPORT.                                                   00085621                                   
+   000096                    05                PIC X(6) VALUE SPACES.                     00085727                                   
+   000097                    05 RL-TRANS-TYPE  PIC X(10).                                 00085820                                   
+   000098                    05                PIC X(4) VALUE SPACES.                     00085927                                   
+   000099                    05 RL-AMOUNT      PIC $ZZZZ9.                                00086020                                   
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               MATCHIN   Date 12/06/2017  Time 18:25:28   Page     5                
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference           
+0  000100                01  EL-ERROR-LIST.                                               00086118                                   
+   000101                    05                 PIC X(22) VALUE 'ACCOUNT NUMBER ERROR: '. 00086227                                   
+   000102                    05 EL-ERROR-EVENT  PIC X(8).                                 00086327                                   
+   000103                01  PROCEDURE-DATA.                                              00086522                                   
+   000104                    05 PIC X(11) VALUE 'DDEPOSIT   '.                            00086618                                   
+   000105                    05 PIC X(11) VALUE 'WWITHDRAWAL'.                            00086718                                   
+   000106                01  PROCEDURE-TABLE REDEFINES PROCEDURE-DATA.                    00086818                                   
+   000107                    05 PT-ENTRY OCCURS 2 TIMES INDEXED BY PT-IDX.                00086918                                   
+   000108                       10 PT-CODE  PIC X(1).                                     00087018                                   
+   000109                       10 PT-TYPE  PIC X(10).                                    00087118                                   
+   000110                PROCEDURE DIVISION.                                              00087203                                   
+   000111                100-HOUSEKEEPING.                                                00087303                                   
+   000112                    OPEN INPUT CUST-FILE                                         00087403                                   
+   000113                               CUST-TRANS                                        00087518                                   
+   000114                         OUTPUT CUST-NEW-MASTER                                  00087618                                   
+   000115                                CUST-RPT                                         00087718                                   
+   000116                                CUST-ERRORS                                      00087818                                   
+   000117                    PERFORM 110-SET-SWITCHES                                     00087925                                   
+   000118                    INITIALIZE ARITHMETIC-WORK-AREA                              00088025                                   
+   000119                    PERFORM UNTIL MS-MASTER-EOF AND                              00088418                                   
+   000120                                  TS-TRANS-EOF                                   00088518                                   
+   000121      1                PERFORM 200-GET-NEXT-RECORD                               00088620                                   
+   000122      1                PERFORM 210-PROCESS-RECORD                                00088720                                   
+   000123                    END-PERFORM                                                  00088820                                   
+   000124                    CLOSE CUST-FILE                                              00089503                                   
+   000125                          CUST-TRANS                                             00089620                                   
+   000126                          CUST-NEW-MASTER                                        00089720                                   
+   000127                          CUST-RPT                                               00089820                                   
+   000128                          CUST-ERRORS                                            00089920                                   
+   000129                    STOP RUN                                                     00090003                                   
+   000130                    .                                                            00090103                                   
+   000131                110-SET-SWITCHES.                                                00090225                                   
+   000132                    SET MS-READ-MSTR                                             00090325                                   
+   000133                        TS-READ-TRANS                                            00090425                                   
+   000134                        MS-MASTER-NOT-EOF                                        00090525                                   
+   000135                        TS-TRANS-NOT-EOF TO TRUE                                 00090626                                   
+   000136                    .                                                            00090825                                   
+   000137                150-DATE.                                                        00090913                                   
+   000138                    MOVE FUNCTION CURRENT-DATE(5:2) TO MONTH                     00091013                                   
+   000139                    MOVE FUNCTION CURRENT-DATE(7:2) TO NUM                       00091113                                   
+   000140                    MOVE FUNCTION CURRENT-DATE(1:4) TO YEAR                      00091213                                   
+   000141                    MOVE WS-TODAYS-DATE TO CUST-LIST                             00091313                                   
+   000142                    WRITE CUST-LIST                                              00091413                                   
+   000143                    .                                                            00091513                                   
+   000144                200-GET-NEXT-RECORD.                                             00091618                                   
+   000145                    EVALUATE MS-READ-MSTR   ALSO TS-READ-TRANS                   00091720                                   
+   000146                        WHEN TRUE           ALSO TRUE                            00091820                                   
+   000147      1                    PERFORM 400-READ-MASTER                               00091920                                   
+   000148      1                    PERFORM 500-READ-TRANS                                00092020                                   
+   000149      1                    SET MS-NO-READ-MSTR                                   00092120                                   
+   000150      1                        TS-DONT-READ-TRANS                                00092220                                   
+   000151      1                        WS-TRANS-DONT-PROCESS TO TRUE                     00092320                                   
+   000152                        WHEN TRUE           ALSO FALSE                           00092420                                   
+   000153      1                    PERFORM 400-READ-MASTER                               00092520                                   
+   000154      1                    SET MS-NO-READ-MSTR                                   00092620                                   
+   000155      1                        WS-TRANS-DONT-PROCESS TO TRUE                     00092720                                   
+   000156                        WHEN FALSE          ALSO TRUE                            00092820                                   
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               MATCHIN   Date 12/06/2017  Time 18:25:28   Page     6                
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference           
+0  000157      1                    PERFORM 500-READ-TRANS                                00092920                                   
+   000158      1                    SET TS-DONT-READ-TRANS TO TRUE                        00093020                                   
+   000159                    END-EVALUATE                                                 00093120                                   
+   000160                    .                                                            00093203                                   
+   000161                210-PROCESS-RECORD.                                              00093320                                   
+   000162                    EVALUATE TS-TRANS-EOF ALSO MS-MASTER-EOF                     00093420                                   
+   000163                        WHEN FALSE        ALSO FALSE                             00093520                                   
+   000164      1             EVALUATE TRUE                                                00093620                                   
+   000165      1                 WHEN IR-ACCT-NUM = TR-ACCT-NUM                           00093720                                   
+   000166      2                    PERFORM 510-PROCESS-TRANS                             00093820                                   
+   000167      2                    SET TS-READ-TRANS                                     00093920                                   
+   000168      2                        WS-TRANS-PROCESS TO TRUE                          00094020                                   
+   000169      1                 WHEN IR-ACCT-NUM < TR-ACCT-NUM                           00094120                                   
+   000170      2                    IF WS-TRANS-PROCESS                                   00094220                                   
+   000171      3                        PERFORM 410-PROCESS-MASTER                        00094320                                   
+   000172      2                    ELSE                                                  00094420                                   
+   000173      3                        PERFORM 420-PROCESS-UNMATCHED-MSTR                00094520                                   
+   000174      2                    END-IF                                                00094620                                   
+   000175      2                    SET MS-READ-MSTR TO TRUE                              00094720                                   
+   000176      1                 WHEN IR-ACCT-NUM > TR-ACCT-NUM                           00094820                                   
+   000177      2                    PERFORM 530-PROCESS-UNMATCHED-TRANS                   00094924                                   
+   000178      2                    SET TS-READ-TRANS TO TRUE                             00095020                                   
+   000179      1             END-EVALUATE                                                 00095120                                   
+   000180                        WHEN TRUE         ALSO FALSE                             00095220                                   
+   000181      1                    IF WS-TRANS-PROCESS                                   00095324                                   
+   000182      2                       PERFORM 410-PROCESS-MASTER                         00095420                                   
+   000183      1                     ELSE                                                 00095520                                   
+   000184      2                       PERFORM 420-PROCESS-UNMATCHED-MSTR                 00095620                                   
+   000185      1                    END-IF                                                00095720                                   
+   000186      1                    SET MS-READ-MSTR TO TRUE                              00095820                                   
+   000187                        WHEN FALSE        ALSO TRUE                              00095920                                   
+   000188      1                    PERFORM 530-PROCESS-UNMATCHED-TRANS                   00096020                                   
+   000189      1                    SET TS-READ-TRANS TO TRUE                             00096124                                   
+   000190                    END-EVALUATE                                                 00096220                                   
+   000191                    .                                                            00096320                                   
+   000192                250-HEADINGS.                                                    00096418                                   
+   000193                    PERFORM 150-DATE                                             00096527                                   
+   000194                    MOVE HEADING-1 TO CUST-LIST                                  00096614                                   
+   000195                    MOVE HEADING-2 TO CUST-LIST                                  00096718                                   
+   000196                    WRITE CUST-LIST                                              00096814                                   
+   000197                       AFTER ADVANCING PAGE                                      00096914                                   
+   000198                    MOVE IR-FIRST TO IL-FIRST                                    00097018                                   
+   000199                    MOVE IR-LAST TO IL-LAST                                      00097118                                   
+   000200                    MOVE IR-ACCT-NUM TO IL-ACCT-NUM                              00097224                                   
+   000201                    MOVE IR-BALANCE TO IL-BALANCE                                00097318                                   
+   000202                    MOVE IL-CUST-LIST TO CUST-LIST                               00097427                                   
+   000203                    WRITE CUST-LIST                                              00097518                                   
+   000204                       AFTER ADVANCING 2 LINES                                   00097618                                   
+   000205                    MOVE HEADING-3 TO CUST-LIST                                  00097718                                   
+   000206                    WRITE CUST-LIST                                              00097818                                   
+   000207                       AFTER ADVANCING 2 LINES                                   00097918                                   
+   000208                    .                                                            00098014                                   
+   000209                260-PRINT-TOTAL-LINE.                                            00098120                                   
+   000210                    ADD IR-BALANCE TO AW-END-BALANCE                             00098227                                   
+   000211                    MOVE AW-END-BALANCE TO TL-END-BALANCE                        00098327                                   
+   000212                    MOVE AW-TRANS-COUNTER TO TL-TOTAL-TRANS                      00098420                                   
+   000213                    MOVE TL-TOTAL-LINE TO CUST-LIST                              00098520                                   
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               MATCHIN   Date 12/06/2017  Time 18:25:28   Page     7                
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference           
+0  000214                    WRITE CUST-LIST                                              00098620                                   
+   000215                        AFTER ADVANCING 2 LINES                                  00098724                                   
+   000216                    .                                                            00098820                                   
+   000217                270-COMPUTE-NEW-BALANCE.                                         00098927                                   
+   000218                    DISPLAY TR-CUST-TRANS-RECORD                                 00099029                                   
+   000219                    DISPLAY IR-CUST-RECORD                                       00099129                                   
+   000220                    IF TR-TRANS-TYPE = 'D'                                       00099227                                   
+   000221      1                ADD TR-AMOUNT TO AW-END-BALANCE                           00099327                                   
+   000222                    END-IF                                                       00099429                                   
+   000223                    IF TR-TRANS-TYPE = 'W'                                       00099529                                   
+   000224      1                SUBTRACT TR-AMOUNT FROM AW-END-BALANCE                    00099627                                   
+   000225                    END-IF                                                       00099727                                   
+   000226                    .                                                            00099827                                   
+   000227                400-READ-MASTER.                                                 00099919                                   
+   000228                    READ CUST-FILE                                               00100019                                   
+   000229                       INTO IR-CUST-RECORD                                       00100119                                   
+   000230                    AT END                                                       00100219                                   
+   000231      1                SET MS-MASTER-EOF TO TRUE                                 00100319                                   
+   000232                    END-READ                                                     00100419                                   
+   000233                    .                                                            00100519                                   
+   000234                410-PROCESS-MASTER.                                              00100620                                   
+   000235                    IF WS-TRANS-PROCESS                                          00100720                                   
+   000236      1                PERFORM 260-PRINT-TOTAL-LINE                              00100820                                   
+   000237                    END-IF                                                       00100920                                   
+   000238                    MOVE AW-END-BALANCE TO IR-BALANCE                            00101027                                   
+   000239                    MOVE IR-CUST-RECORD TO CUST-NEW-MASTER-LIST                  00101127                                   
+   000240                    WRITE CUST-NEW-MASTER-LIST                                   00101220                                   
+   000241                    .                                                            00101320                                   
+   000242                420-PROCESS-UNMATCHED-MSTR.                                      00101420                                   
+   000243                    MOVE CUST-RECORD TO CUST-NEW-MASTER-LIST                     00101520                                   
+   000244                    WRITE CUST-NEW-MASTER-LIST                                   00101620                                   
+   000245                    .                                                            00101720                                   
+   000246                500-READ-TRANS.                                                  00101819                                   
+   000247                    READ CUST-TRANS                                              00101919                                   
+   000248                       INTO TR-CUST-TRANS-RECORD                                 00102019                                   
+   000249                    AT END                                                       00102119                                   
+   000250      1                SET TS-TRANS-EOF TO TRUE                                  00102224                                   
+   000251                    END-READ                                                     00102319                                   
+   000252                    .                                                            00102419                                   
+   000253                510-PROCESS-TRANS.                                               00102520                                   
+   000254                    IF WS-TRANS-DONT-PROCESS                                     00102620                                   
+   000255      1                PERFORM 250-HEADINGS                                      00102720                                   
+   000256      1                INITIALIZE ARITHMETIC-WORK-AREA                           00102820                                   
+   000257                    END-IF                                                       00102920                                   
+   000258                    ADD 1 TO AW-TRANS-COUNTER                                    00103020                                   
+   000259                    MOVE TR-AMOUNT TO RL-AMOUNT                                  00103120                                   
+   000260                    PERFORM 520-TRANS-TYPE-SEARCH                                00103220                                   
+   000261                    PERFORM 270-COMPUTE-NEW-BALANCE                              00103328                                   
+   000262                    MOVE RL-REPORT TO CUST-LIST                                  00103426                                   
+   000263                    WRITE CUST-LIST                                              00103526                                   
+   000264                    .                                                            00103620                                   
+   000265                520-TRANS-TYPE-SEARCH.                                           00103720                                   
+   000266                    SET PT-IDX TO 1                                              00103820                                   
+   000267                    SEARCH PT-ENTRY                                              00103926                                   
+   000268                       WHEN                                                      00104020                                   
+   000269                          TR-TRANS-TYPE = PT-CODE (PT-IDX)                       00104120                                   
+   000270      1                      MOVE PT-TYPE (PT-IDX) TO RL-TRANS-TYPE              00104220                                   
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               MATCHIN   Date 12/06/2017  Time 18:25:28   Page     8                
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference           
+0  000271                    END-SEARCH                                                   00104320                                   
+   000272                    .                                                            00104420                                   
+   000273                530-PROCESS-UNMATCHED-TRANS.                                     00104520                                   
+   000274                    MOVE TR-CUST-TRANS-RECORD TO EL-ERROR-EVENT                  00104620                                   
+   000275                    MOVE EL-ERROR-LIST TO CUST-ERRORS-LIST                       00104720                                   
+   000276                    WRITE CUST-ERRORS-LIST                                       00104820                                   
+   000277                       AFTER ADVANCING 1 LINE                                    00104920                                   
+   000278                    .                                                            00105020                                   
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               MATCHIN   Date 12/06/2017  Time 18:25:28   Page     9                
+0LineID  Message code  Message text                                                                                                  
+                                                                                                                                     
+     20  IGYGR1216-I   A "RECORDING MODE" of "F" was assumed for file "CUST-FILE".                                                   
+                                                                                                                                     
+     22  IGYGR1216-I   A "RECORDING MODE" of "F" was assumed for file "CUST-TRANS".                                                  
+                                                                                                                                     
+     24  IGYGR1216-I   A "RECORDING MODE" of "F" was assumed for file "CUST-NEW-MASTER".                                             
+                                                                                                                                     
+     26  IGYGR1216-I   A "RECORDING MODE" of "F" was assumed for file "CUST-RPT".                                                    
+                                                                                                                                     
+     28  IGYGR1216-I   A "RECORDING MODE" of "F" was assumed for file "CUST-ERRORS".                                                 
+-Messages    Total    Informational    Warning    Error    Severe    Terminating                                                     
+0Printed:       5           5                                                                                                        
+-* Statistics for COBOL program MATCHIN:                                                                                             
+ *    Source records = 278                                                                                                           
+ *    Data Division statements = 58                                                                                                  
+ *    Procedure Division statements = 87                                                                                             
+0End of compilation 1,  program MATCHIN,  highest severity 0.                                                                        
+0Return code 0                                                                                                                       
+ 19653373Jen   Aniston  0031725
+ 28410574GeraldFord     0000124
+ 29994591Chris Brown    0023512
+ 34757570Bob   Hope     0001231
+ 37919367Nick  Jonas    0024512
+ 38502041Carol Kline    0023141
+ 38951991Bill  Gates    0013141
+ 41572681Harry Potter   0000242
+ 51392965Ali   Sanchez  0018214
+ 52341797Sam   Hunt     0105802
+ 58876477Sue   King     0032842
+ 60721280Kelly Smith    0012451
+ 67228905Cindy Crawford 0091401
+ 70833663Sarah Sloan    0158862
+ 71808883Hal   Jordan   0023212
+ 74059204HannahMartin   0012415
+ 78158876Betty White    0081412
+ 78249307AmandaThomas   0036235
+ 79650216BaileyBradford 0063425
+ 81111366Tom   Cruise   0091481
+ 81168472Joe   King     0080265
+ 81513647Chris Pratt    0024526
+ 81528396Brad  Pitt     0014124
+ 85022320Karen Kingsman 0051092
+ 87933090Jeff  Foxworthy0179467
+ 12/06/2017                                                                             
+1    NAME         ACCOUNT NUMBER   BALANCE                                              
+0Jen    Aniston      19653373       $  4512                                             
+0      W OR D        AMOUNT                                                             
+       DEPOSIT       $ 2340                                                             
+       DEPOSIT       $25124                                                             
+       WITHDRAWAL    $  251                                                             
+0    TOTAL TRANSACTIONS: 3    ENDING BALANCE: $ 31725                                   
+ 12/06/2017                                                                             
+1    NAME         ACCOUNT NUMBER   BALANCE                                              
+0Sam    Hunt         52341797       $ 12451                                             
+0      W OR D        AMOUNT                                                             
+       DEPOSIT       $24512                                                             
+       DEPOSIT       $35324                                                             
+       DEPOSIT       $33515                                                             
+0    TOTAL TRANSACTIONS: 3    ENDING BALANCE: $105802                                   
+ 12/06/2017                                                                             
+1    NAME         ACCOUNT NUMBER   BALANCE                                              
+0Sarah  Sloan        70833663       $ 84712                                             
+0      W OR D        AMOUNT                                                             
+       DEPOSIT       $86724                                                             
+       WITHDRAWAL    $  123                                                             
+       WITHDRAWAL    $12451                                                             
+0    TOTAL TRANSACTIONS: 3    ENDING BALANCE: $158862                                   
+ 12/06/2017                                                                             
+1    NAME         ACCOUNT NUMBER   BALANCE                                              
+0Joe    King         81168472       $ 56823                                             
+0      W OR D        AMOUNT                                                             
+       DEPOSIT       $ 1522                                                             
+       WITHDRAWAL    $ 2412                                                             
+       WITHDRAWAL    $24332                                                             
+0    TOTAL TRANSACTIONS: 3    ENDING BALANCE: $ 80265                                   
+ 12/06/2017                                                                             
+1    NAME         ACCOUNT NUMBER   BALANCE                                              
+0Karen  Kingsman     85022320       $ 34243                                             
+0      W OR D        AMOUNT                                                             
+       DEPOSIT       $24910                                                             
+       WITHDRAWAL    $  514                                                             
+       WITHDRAWAL    $41245                                                             
+0    TOTAL TRANSACTIONS: 3    ENDING BALANCE: $ 51092                                   
+ 12/06/2017                                                                             
+1    NAME         ACCOUNT NUMBER   BALANCE                                              
+0Jeff   Foxworthy    87933090       $ 81914                                             
+0      W OR D        AMOUNT                                                             
+       DEPOSIT       $  141                                                             
+       DEPOSIT       $  450                                                             
+       WITHDRAWAL    $98144                                                             
+0    TOTAL TRANSACTIONS: 3    ENDING BALANCE: $179467                                   
+ ACCOUNT NUMBER ERROR: 52125172              
+ ACCOUNT NUMBER ERROR: 81512847              
+ 19653373D02340                                                                                                          
+ 19653373Jen   Aniston  0004512                                                                                          
+ 19653373D25124                                                                                                          
+ 19653373Jen   Aniston  0004512                                                                                          
+ 19653373W00251                                                                                                          
+ 19653373Jen   Aniston  0004512                                                                                          
+ 52341797D24512                                                                                                          
+ 52341797Sam   Hunt     0012451                                                                                          
+ 52341797D35324                                                                                                          
+ 52341797Sam   Hunt     0012451                                                                                          
+ 52341797D33515                                                                                                          
+ 52341797Sam   Hunt     0012451                                                                                          
+ 70833663D86724                                                                                                          
+ 70833663Sarah Sloan    0084712                                                                                          
+ 70833663W00123                                                                                                          
+ 70833663Sarah Sloan    0084712                                                                                          
+ 70833663W12451                                                                                                          
+ 70833663Sarah Sloan    0084712                                                                                          
+ 81168472D01522                                                                                                          
+ 81168472Joe   King     0056823                                                                                          
+ 81168472W02412                                                                                                          
+ 81168472Joe   King     0056823                                                                                          
+ 81168472W24332                                                                                                          
+ 81168472Joe   King     0056823                                                                                          
+ 85022320D24910                                                                                                          
+ 85022320Karen Kingsman 0034243                                                                                          
+ 85022320W00514                                                                                                          
+ 85022320Karen Kingsman 0034243                                                                                          
+ 85022320W41245                                                                                                          
+ 85022320Karen Kingsman 0034243                                                                                          
+ 87933090D00141                                                                                                          
+ 87933090Jeff  Foxworthy0081914                                                                                          
+ 87933090D00450                                                                                                          
+ 87933090Jeff  Foxworthy0081914                                                                                          
+ 87933090W98144                                                                                                          
+ 87933090Jeff  Foxworthy0081914                                                                                          
+1                    J E S 2  J O B  L O G  --  S Y S T E M  S 0 W 1  --  N O D E  Z O S K C T R         
+0 
+ 10.02.44 JOB00863 ---- THURSDAY,  07 DEC 2017 ----
+ 10.02.44 JOB00863  IRR010I  USERID KC03KCE  IS ASSIGNED TO THIS JOB.
+ 10.02.44 JOB00863  IEF677I WARNING MESSAGE(S) FOR JOB KC03KCEX ISSUED
+ 10.02.44 JOB00863  ICH70001I KC03KCE  LAST ACCESS AT 09:44:38 ON THURSDAY, DECEMBER 7, 2017
+ 10.02.44 JOB00863  $HASP373 KC03KCEX STARTED - INIT 1    - CLASS A        - SYS S0W1
+ 10.02.44 JOB00863  -                                         --TIMINGS (MINS.)--            ----PAGING COUNTS---
+ 10.02.44 JOB00863  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP    TCB    SRB  CLOCK   SERV  PG   PAGE   SWAP    VIO SWAPS
+ 10.02.44 JOB00863  -KC03KCEX "ÿ÷[                 00    468 ******    .00     .0   1136   0      0      0      0     0
+ 10.02.44 JOB00863  -KC03KCEX "ÿ÷[                 00    189 ******    .00     .0    671   0      0      0      0     0
+ 10.02.45 JOB00863  -KC03KCEX "ÿ÷[                 00    161 ******    .00     .0    522   0      0      0      0     0
+ 10.02.45 JOB00863  -KC03KCEX ENDED.  NAME-GODLEWSKI            TOTAL TCB CPU TIME=   .00  TOTAL ELAPSED TIME=    .0
+ 10.02.45 JOB00863  $HASP395 KC03KCEX ENDED
+0------ JES2 JOB STATISTICS ------
+-  07 DEC 2017 JOB EXECUTION DATE
+-          288 CARDS READ
+-          524 SYSOUT PRINT RECORDS
+-            0 SYSOUT PUNCH RECORDS
+-           39 SYSOUT SPOOL KBYTES
+-         0.01 MINUTES EXECUTION TIME
+         1 //KC03KCEX JOB 2,GODLEWSKI,LINES=(5,CANCEL),NOTIFY=KC03KCE,             JOB00863
+           // MSGLEVEL=(2,0),MSGCLASS=A                                            00020000
+         2 //STEP2 EXEC PROC=IGYWCLG,LNGPRFX='IGY420',                             00030000
+           // PARM.COBOL='NOX'                                                     00040000
+        26 //SYSIN DD *                                                            00050000
+        30 //LKED.SYSPRINT DD DUMMY                                                00105200
+        41 //GO.CUSTIN DD DSN=KC02580.P5G11M.DAT,DISP=SHR                          00105322
+        42 //GO.TRANSIN DD DSN=KC02580.P5G11T.DAT,DISP=SHR                         00105422
+        43 //GO.CUSTOUT DD SYSOUT=A                                                00105520
+        44 //GO.CUSTRPT DD SYSOUT=A                                                00106020
+        45 //GO.ERROROUT DD SYSOUT=A                                               00110020
+        46 //GO.SYSOUT DD SYSOUT=A                                                 00120020
+  STMT NO. MESSAGE
+         2 IEFC001I PROCEDURE IGYWCLG WAS EXPANDED USING SYSTEM LIBRARY USER.PROCLIB
+        35 IEF686I DDNAME REFERRED TO ON DDNAME KEYWORD IN PRIOR STEP WAS NOT RESOLVED 
+ ICH70001I KC03KCE  LAST ACCESS AT 09:44:38 ON THURSDAY, DECEMBER 7, 2017
+ IEF142I KC03KCEX COBOL STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/COBOL   /START 2017341.1002
+ IEF032I STEP/COBOL   /STOP  2017341.1002 
+         CPU:     0 HR  00 MIN  00.04 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+         VIRT:  8896K  SYS:   308K  EXT:  1579976K  SYS:    11552K
+         ATB- REAL:                    24K  SLOTS:                     0K
+              VIRT- ALLOC:       4M SHRD:       0M
+ IEF142I KC03KCEX LKED STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/LKED    /START 2017341.1002
+ IEF032I STEP/LKED    /STOP  2017341.1002 
+         CPU:     0 HR  00 MIN  00.02 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+         VIRT:    88K  SYS:   292K  EXT:     1640K  SYS:    11496K
+         ATB- REAL:                     0K  SLOTS:                     0K
+              VIRT- ALLOC:       0M SHRD:       0M
+ IEF142I KC03KCEX GO STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/GO      /START 2017341.1002
+ IEF032I STEP/GO      /STOP  2017341.1002 
+         CPU:     0 HR  00 MIN  00.02 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+         VIRT:   120K  SYS:   384K  EXT:     2948K  SYS:    11552K
+         ATB- REAL:                     0K  SLOTS:                     0K
+              VIRT- ALLOC:       0M SHRD:       0M
+ IEF375I  JOB/KC03KCEX/START 2017341.1002
+ IEF033I  JOB/KC03KCEX/STOP  2017341.1002 
+         CPU:     0 HR  00 MIN  00.08 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0                         Date 12/07/2017  Time 10:02:44   Page     1                
+0Invocation parameters:                                                                                                              
+  NOX                                                                                                                                
+0Options in effect:                                                                                                                  
+  NOADATA                                                                                                                            
+    ADV                                                                                                                              
+    QUOTE                                                                                                                            
+    ARITH(COMPAT)                                                                                                                    
+  NOAWO                                                                                                                              
+  NOBLOCK0                                                                                                                           
+    BUFSIZE(4096)                                                                                                                    
+  NOCICS                                                                                                                             
+    CODEPAGE(1140)                                                                                                                   
+  NOCOMPILE(S)                                                                                                                       
+  NOCURRENCY                                                                                                                         
+    DATA(31)                                                                                                                         
+  NODATEPROC                                                                                                                         
+    DBCS                                                                                                                             
+  NODECK                                                                                                                             
+  NODIAGTRUNC                                                                                                                        
+  NODLL                                                                                                                              
+  NODUMP                                                                                                                             
+  NODYNAM                                                                                                                            
+  NOEXIT                                                                                                                             
+  NOEXPORTALL                                                                                                                        
+  NOFASTSRT                                                                                                                          
+    FLAG(I,I)                                                                                                                        
+  NOFLAGMIG4                                                                                                                         
+  NOFLAGSTD                                                                                                                          
+    INTDATE(ANSI)                                                                                                                    
+    LANGUAGE(EN)                                                                                                                     
+  NOLIB                                                                                                                              
+    LINECOUNT(60)                                                                                                                    
+  NOLIST                                                                                                                             
+  NOMAP                                                                                                                              
+  NOMDECK                                                                                                                            
+  NONAME                                                                                                                             
+    NSYMBOL(NATIONAL)                                                                                                                
+  NONUMBER                                                                                                                           
+    NUMPROC(NOPFD)                                                                                                                   
+    OBJECT                                                                                                                           
+  NOOFFSET                                                                                                                           
+  NOOPTIMIZE                                                                                                                         
+    OUTDD(SYSOUT)                                                                                                                    
+    PGMNAME(COMPAT)                                                                                                                  
+    RENT                                                                                                                             
+    RMODE(AUTO)                                                                                                                      
+    SEQUENCE                                                                                                                         
+    SIZE(MAX)                                                                                                                        
+    SOURCE                                                                                                                           
+    SPACE(1)                                                                                                                         
+  NOSQL                                                                                                                              
+    SQLCCSID                                                                                                                         
+  NOSSRANGE                                                                                                                          
+  NOTERM                                                                                                                             
+  NOTEST                                                                                                                             
+  NOTHREAD                                                                                                                           
+    TRUNC(STD)                                                                                                                       
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0                         Date 12/07/2017  Time 10:02:44   Page     2                
+0 NOVBREF                                                                                                                            
+  NOWORD                                                                                                                             
+    XMLPARSE(XMLSS)                                                                                                                  
+  NOXREF                                                                                                                             
+    YEARWINDOW(1900)                                                                                                                 
+    ZWB                                                                                                                              
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               MATCHIN   Date 12/07/2017  Time 10:02:44   Page     3                
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference           
+0  000001                IDENTIFICATION DIVISION.                                         00060003                                   
+   000002                PROGRAM-ID. MATCHIN.                                             00061016                                   
+   000003               * GROUP 11 PROJECT 5                                              00062016                                   
+   000004               * 12/11/2017                                                      00063016                                   
+   000005                ENVIRONMENT DIVISION.                                            00064003                                   
+   000006                INPUT-OUTPUT SECTION.                                            00065003                                   
+   000007                FILE-CONTROL.                                                    00066003                                   
+   000008                    SELECT CUST-FILE                                             00067009                                   
+   000009                        ASSIGN TO CUSTIN.                                        00068009                                   
+   000010                    SELECT CUST-TRANS                                            00069021                                   
+   000011                        ASSIGN TO TRANSIN.                                       00069117                                   
+   000012                    SELECT CUST-NEW-MASTER                                       00069221                                   
+   000013                        ASSIGN TO CUSTOUT.                                       00069317                                   
+   000014                    SELECT CUST-RPT                                              00070021                                   
+   000015                        ASSIGN TO CUSTRPT.                                       00071009                                   
+   000016                    SELECT CUST-ERRORS                                           00071121                                   
+   000017                        ASSIGN TO ERROROUT.                                      00071217                                   
+   000018                DATA DIVISION.                                                   00072003                                   
+   000019                FILE SECTION.                                                    00073003                                   
+   000020                FD CUST-FILE.                                                    00074009                                   
+                                                                                                                                     
+ ==000020==> IGYGR1216-I A "RECORDING MODE" of "F" was assumed for file "CUST-FILE".                                                 
+                                                                                                                                     
+   000021                01 CUST-RECORD           PIC X(30).                              00075028                                   
+   000022                FD CUST-TRANS.                                                   00075117                                   
+                                                                                                                                     
+ ==000022==> IGYGR1216-I A "RECORDING MODE" of "F" was assumed for file "CUST-TRANS".                                                
+                                                                                                                                     
+   000023                01 CUST-TRANS-RECORD     PIC X(14).                              00075217                                   
+   000024                FD CUST-NEW-MASTER.                                              00075317                                   
+                                                                                                                                     
+ ==000024==> IGYGR1216-I A "RECORDING MODE" of "F" was assumed for file "CUST-NEW-MASTER".                                           
+                                                                                                                                     
+   000025                01 CUST-NEW-MASTER-LIST  PIC X(30).                              00075432                                   
+   000026                FD CUST-RPT.                                                     00076003                                   
+                                                                                                                                     
+ ==000026==> IGYGR1216-I A "RECORDING MODE" of "F" was assumed for file "CUST-RPT".                                                  
+                                                                                                                                     
+   000027                01 CUST-LIST             PIC X(87).                              00077017                                   
+   000028                FD CUST-ERRORS.                                                  00077117                                   
+                                                                                                                                     
+ ==000028==> IGYGR1216-I A "RECORDING MODE" of "F" was assumed for file "CUST-ERRORS".                                               
+                                                                                                                                     
+   000029                01 CUST-ERRORS-LIST      PIC X(44).                              00077217                                   
+   000030                WORKING-STORAGE SECTION.                                         00078003                                   
+   000031                01  WS-SWITCHES.                                                 00079003                                   
+   000032                    05 MS-EOF                   PIC X.                           00079117                                   
+   000033                       88 MS-MASTER-EOF         VALUE 'E'.                       00079217                                   
+   000034                       88 MS-MASTER-NOT-EOF     VALUE 'N'.                       00079317                                   
+   000035                    05 TS-EOF                   PIC X.                           00079417                                   
+   000036                       88 TS-TRANS-EOF          VALUE 'E'.                       00079517                                   
+   000037                       88 TS-TRANS-NOT-EOF      VALUE 'N'.                       00079617                                   
+   000038                    05 MS-READ-NEW-MSTR         PIC X.                           00079717                                   
+   000039                       88 MS-READ-MSTR          VALUE 'T'.                       00079818                                   
+   000040                       88 MS-NO-READ-MSTR      VALUE 'F'.                        00079924                                   
+   000041                    05 TS-READ-NEW-TRANS        PIC X.                           00080017                                   
+   000042                       88 TS-READ-TRANS         VALUE 'T'.                       00080117                                   
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               MATCHIN   Date 12/07/2017  Time 10:02:44   Page     4                
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference           
+0  000043                       88 TS-DONT-READ-TRANS    VALUE 'F'.                       00080217                                   
+   000044                    05 WS-TRANS-PROC            PIC X.                           00080317                                   
+   000045                       88 WS-TRANS-PROCESS      VALUE 'P'.                       00080417                                   
+   000046                       88 WS-TRANS-DONT-PROCESS VALUE 'N'.                       00080517                                   
+   000047                01  WS-TODAYS-DATE.                                              00080613                                   
+   000048                    05 MONTH       PIC 9(2).                                     00080713                                   
+   000049                    05 FILLER      PIC X(1) VALUE '/'.                           00080813                                   
+   000050                    05 NUM         PIC 9(2).                                     00080913                                   
+   000051                    05 FILLER      PIC X(1) VALUE '/'.                           00081013                                   
+   000052                    05 YEAR        PIC 9(4).                                     00081113                                   
+   000053                01  HEADING-1.                                                   00081214                                   
+   000054                    05     PIC X(29) VALUE SPACES.                               00081318                                   
+   000055                    05     PIC X(29) VALUE 'JBSW MEMBER ACCOUNT STATEMENT'.      00081418                                   
+   000056                01  HEADING-2.                                                   00081614                                   
+   000057                    05     PIC X(4) VALUE SPACES.                                00081718                                   
+   000058                    05     PIC X(4) VALUE 'NAME'.                                00081818                                   
+   000059                    05     PIC X(9) VALUE SPACES.                                00081918                                   
+   000060                    05     PIC X(14) VALUE 'ACCOUNT NUMBER'.                     00082018                                   
+   000061                    05     PIC X(3) VALUE SPACES.                                00082118                                   
+   000062                    05     PIC X(7) VALUE 'BALANCE'.                             00082218                                   
+   000063                01  HEADING-3.                                                   00082318                                   
+   000064                    05     PIC X(6) VALUE SPACES.                                00082418                                   
+   000065                    05     PIC X(6) VALUE 'W OR D'.                              00082518                                   
+   000066                    05     PIC X(8) VALUE SPACES.                                00082627                                   
+   000067                    05     PIC X(6) VALUE 'AMOUNT'.                              00082727                                   
+   000068                01  TL-TOTAL-LINE.                                               00082821                                   
+   000069                    05                PIC X(4) VALUE SPACES.                     00082918                                   
+   000070                    05                PIC X(19) VALUE 'TOTAL TRANSACTIONS:'.     00083027                                   
+   000071                    05 TL-TOTAL-TRANS PIC Z9.                                    00083218                                   
+   000072                    05                PIC X(4) VALUE SPACES.                     00083327                                   
+   000073                    05                PIC X(16) VALUE 'ENDING BALANCE: '.        00083427                                   
+   000074                    05 TL-END-BALANCE PIC -$ZZZ,ZZ9.                             00083530                                   
+   000075                01 ARITHMETIC-WORK-AREA.                                         00083615                                   
+   000076                    05 AW-TRANS-COUNTER  PIC 9(2).                               00083718                                   
+   000077                    05 AW-END-BALANCE    PIC S9(7).                              00083830                                   
+   000078                01  IR-CUST-RECORD.                                              00083903                                   
+   000079                    05 IR-ACCT-NUM PIC 9(8).                                     00084018                                   
+   000080                    05 IR-FIRST    PIC X(6).                                     00084107                                   
+   000081                    05 IR-LAST     PIC X(9).                                     00084203                                   
+   000082                    05 IR-BALANCE  PIC S9(7).                                    00084332                                   
+   000083                01  TR-CUST-TRANS-RECORD.                                        00084418                                   
+   000084                    05 TR-ACCT-NUM   PIC 9(8).                                   00084518                                   
+   000085                    05 TR-TRANS-TYPE PIC X(1).                                   00084624                                   
+   000086                    05 TR-AMOUNT     PIC 9(5).                                   00084718                                   
+   000087                01  IL-CUST-LIST.                                                00084803                                   
+   000088                    05 IL-FIRST    PIC X(6).                                     00084903                                   
+   000089                    05             PIC X(1) VALUE SPACES.                        00085015                                   
+   000090                    05 IL-LAST     PIC X(9).                                     00085103                                   
+   000091                    05             PIC X(4) VALUE SPACES.                        00085227                                   
+   000092                    05 IL-ACCT-NUM PIC 9(8).                                     00085304                                   
+   000093                    05             PIC X(7) VALUE SPACES.                        00085427                                   
+   000094                    05 IL-BALANCE  PIC -$ZZZZZ9.                                 00085530                                   
+   000095                01  RL-REPORT.                                                   00085621                                   
+   000096                    05                PIC X(6) VALUE SPACES.                     00085727                                   
+   000097                    05 RL-TRANS-TYPE  PIC X(10).                                 00085820                                   
+   000098                    05                PIC X(4) VALUE SPACES.                     00085927                                   
+   000099                    05 RL-AMOUNT      PIC $ZZZZ9.                                00086020                                   
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               MATCHIN   Date 12/07/2017  Time 10:02:44   Page     5                
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference           
+0  000100                01  EL-ERROR-LIST.                                               00086118                                   
+   000101                    05                 PIC X(22) VALUE 'ACCOUNT NUMBER ERROR: '. 00086227                                   
+   000102                    05 EL-ERROR-EVENT  PIC X(8).                                 00086327                                   
+   000103                01  PROCEDURE-DATA.                                              00086522                                   
+   000104                    05 PIC X(11) VALUE 'DDEPOSIT   '.                            00086618                                   
+   000105                    05 PIC X(11) VALUE 'WWITHDRAWAL'.                            00086718                                   
+   000106                01  PROCEDURE-TABLE REDEFINES PROCEDURE-DATA.                    00086818                                   
+   000107                    05 PT-ENTRY OCCURS 2 TIMES INDEXED BY PT-IDX.                00086918                                   
+   000108                       10 PT-CODE  PIC X(1).                                     00087018                                   
+   000109                       10 PT-TYPE  PIC X(10).                                    00087118                                   
+   000110                PROCEDURE DIVISION.                                              00087203                                   
+   000111                100-HOUSEKEEPING.                                                00087303                                   
+   000112                    OPEN INPUT CUST-FILE                                         00087403                                   
+   000113                               CUST-TRANS                                        00087518                                   
+   000114                         OUTPUT CUST-NEW-MASTER                                  00087618                                   
+   000115                                CUST-RPT                                         00087718                                   
+   000116                                CUST-ERRORS                                      00087818                                   
+   000117                    PERFORM 110-SET-SWITCHES                                     00087925                                   
+   000118                    INITIALIZE ARITHMETIC-WORK-AREA                              00088025                                   
+   000119                    PERFORM UNTIL MS-MASTER-EOF AND                              00088418                                   
+   000120                                  TS-TRANS-EOF                                   00088518                                   
+   000121      1                PERFORM 200-GET-NEXT-RECORD                               00088620                                   
+   000122      1                PERFORM 210-PROCESS-RECORD                                00088720                                   
+   000123                    END-PERFORM                                                  00088820                                   
+   000124                    CLOSE CUST-FILE                                              00089503                                   
+   000125                          CUST-TRANS                                             00089620                                   
+   000126                          CUST-NEW-MASTER                                        00089720                                   
+   000127                          CUST-RPT                                               00089820                                   
+   000128                          CUST-ERRORS                                            00089920                                   
+   000129                    STOP RUN                                                     00090003                                   
+   000130                    .                                                            00090103                                   
+   000131                110-SET-SWITCHES.                                                00090225                                   
+   000132                    SET MS-READ-MSTR                                             00090325                                   
+   000133                        TS-READ-TRANS                                            00090425                                   
+   000134                        MS-MASTER-NOT-EOF                                        00090525                                   
+   000135                        TS-TRANS-NOT-EOF TO TRUE                                 00090626                                   
+   000136                    .                                                            00090825                                   
+   000137                150-DATE.                                                        00090913                                   
+   000138                    MOVE FUNCTION CURRENT-DATE(5:2) TO MONTH                     00091013                                   
+   000139                    MOVE FUNCTION CURRENT-DATE(7:2) TO NUM                       00091113                                   
+   000140                    MOVE FUNCTION CURRENT-DATE(1:4) TO YEAR                      00091213                                   
+   000141                    MOVE WS-TODAYS-DATE TO CUST-LIST                             00091313                                   
+   000142                    WRITE CUST-LIST                                              00091413                                   
+   000143                    .                                                            00091513                                   
+   000144                200-GET-NEXT-RECORD.                                             00091618                                   
+   000145                    EVALUATE MS-READ-MSTR   ALSO TS-READ-TRANS                   00091720                                   
+   000146                        WHEN TRUE           ALSO TRUE                            00091820                                   
+   000147      1                    PERFORM 400-READ-MASTER                               00091920                                   
+   000148      1                    PERFORM 500-READ-TRANS                                00092020                                   
+   000149      1                    SET MS-NO-READ-MSTR                                   00092120                                   
+   000150      1                        TS-DONT-READ-TRANS                                00092220                                   
+   000151      1                        WS-TRANS-DONT-PROCESS TO TRUE                     00092320                                   
+   000152                        WHEN TRUE           ALSO FALSE                           00092420                                   
+   000153      1                    PERFORM 400-READ-MASTER                               00092520                                   
+   000154      1                    SET MS-NO-READ-MSTR                                   00092620                                   
+   000155      1                        WS-TRANS-DONT-PROCESS TO TRUE                     00092720                                   
+   000156                        WHEN FALSE          ALSO TRUE                            00092820                                   
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               MATCHIN   Date 12/07/2017  Time 10:02:44   Page     6                
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference           
+0  000157      1                    PERFORM 500-READ-TRANS                                00092920                                   
+   000158      1                    SET TS-DONT-READ-TRANS TO TRUE                        00093020                                   
+   000159                    END-EVALUATE                                                 00093120                                   
+   000160                    .                                                            00093203                                   
+   000161                210-PROCESS-RECORD.                                              00093320                                   
+   000162                    EVALUATE TS-TRANS-EOF ALSO MS-MASTER-EOF                     00093420                                   
+   000163                        WHEN FALSE        ALSO FALSE                             00093520                                   
+   000164      1             EVALUATE TRUE                                                00093620                                   
+   000165      1                 WHEN IR-ACCT-NUM = TR-ACCT-NUM                           00093720                                   
+   000166      2                    PERFORM 510-PROCESS-TRANS                             00093820                                   
+   000167      2                    SET TS-READ-TRANS                                     00093920                                   
+   000168      2                        WS-TRANS-PROCESS TO TRUE                          00094020                                   
+   000169      1                 WHEN IR-ACCT-NUM < TR-ACCT-NUM                           00094120                                   
+   000170      2                    IF WS-TRANS-PROCESS                                   00094220                                   
+   000171      3                        PERFORM 410-PROCESS-MASTER                        00094320                                   
+   000172      2                    ELSE                                                  00094420                                   
+   000173      3                        PERFORM 420-PROCESS-UNMATCHED-MSTR                00094520                                   
+   000174      2                    END-IF                                                00094620                                   
+   000175      2                    SET MS-READ-MSTR TO TRUE                              00094720                                   
+   000176      1                 WHEN IR-ACCT-NUM > TR-ACCT-NUM                           00094820                                   
+   000177      2                    PERFORM 530-PROCESS-UNMATCHED-TRANS                   00094924                                   
+   000178      2                    SET TS-READ-TRANS TO TRUE                             00095020                                   
+   000179      1             END-EVALUATE                                                 00095120                                   
+   000180                        WHEN TRUE         ALSO FALSE                             00095220                                   
+   000181      1                    IF WS-TRANS-PROCESS                                   00095324                                   
+   000182      2                       PERFORM 410-PROCESS-MASTER                         00095420                                   
+   000183      1                     ELSE                                                 00095520                                   
+   000184      2                       PERFORM 420-PROCESS-UNMATCHED-MSTR                 00095620                                   
+   000185      1                    END-IF                                                00095720                                   
+   000186      1                    SET MS-READ-MSTR TO TRUE                              00095820                                   
+   000187                        WHEN FALSE        ALSO TRUE                              00095920                                   
+   000188      1                    PERFORM 530-PROCESS-UNMATCHED-TRANS                   00096020                                   
+   000189      1                    SET TS-READ-TRANS TO TRUE                             00096124                                   
+   000190                    END-EVALUATE                                                 00096220                                   
+   000191                    .                                                            00096320                                   
+   000192                250-HEADINGS.                                                    00096418                                   
+   000193                    PERFORM 150-DATE                                             00096527                                   
+   000194                    MOVE HEADING-1 TO CUST-LIST                                  00096614                                   
+   000195                    MOVE HEADING-2 TO CUST-LIST                                  00096718                                   
+   000196                    WRITE CUST-LIST                                              00096814                                   
+   000197                       AFTER ADVANCING PAGE                                      00096914                                   
+   000198                    MOVE IR-FIRST TO IL-FIRST                                    00097018                                   
+   000199                    MOVE IR-LAST TO IL-LAST                                      00097118                                   
+   000200                    MOVE IR-ACCT-NUM TO IL-ACCT-NUM                              00097224                                   
+   000201                    MOVE IR-BALANCE TO IL-BALANCE                                00097318                                   
+   000202                    MOVE IL-CUST-LIST TO CUST-LIST                               00097427                                   
+   000203                    WRITE CUST-LIST                                              00097518                                   
+   000204                       AFTER ADVANCING 2 LINES                                   00097618                                   
+   000205                    MOVE HEADING-3 TO CUST-LIST                                  00097718                                   
+   000206                    WRITE CUST-LIST                                              00097818                                   
+   000207                       AFTER ADVANCING 2 LINES                                   00097918                                   
+   000208                    .                                                            00098014                                   
+   000209                260-PRINT-TOTAL-LINE.                                            00098120                                   
+   000210                    ADD IR-BALANCE TO AW-END-BALANCE                             00098227                                   
+   000211                    MOVE AW-END-BALANCE TO TL-END-BALANCE                        00098327                                   
+   000212                    MOVE AW-TRANS-COUNTER TO TL-TOTAL-TRANS                      00098420                                   
+   000213                    MOVE TL-TOTAL-LINE TO CUST-LIST                              00098520                                   
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               MATCHIN   Date 12/07/2017  Time 10:02:44   Page     7                
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference           
+0  000214                    WRITE CUST-LIST                                              00098620                                   
+   000215                        AFTER ADVANCING 2 LINES                                  00098724                                   
+   000216                    .                                                            00098820                                   
+   000217                270-COMPUTE-NEW-BALANCE.                                         00098927                                   
+   000218                    IF TR-TRANS-TYPE = 'D'                                       00099227                                   
+   000219      1                ADD TR-AMOUNT TO AW-END-BALANCE                           00099327                                   
+   000220                    END-IF                                                       00099429                                   
+   000221                    IF TR-TRANS-TYPE = 'W'                                       00099529                                   
+   000222      1                SUBTRACT TR-AMOUNT FROM AW-END-BALANCE                    00099627                                   
+   000223                    END-IF                                                       00099727                                   
+   000224                    .                                                            00099827                                   
+   000225                400-READ-MASTER.                                                 00099919                                   
+   000226                    READ CUST-FILE                                               00100019                                   
+   000227                       INTO IR-CUST-RECORD                                       00100119                                   
+   000228                    AT END                                                       00100219                                   
+   000229      1                SET MS-MASTER-EOF TO TRUE                                 00100319                                   
+   000230                    END-READ                                                     00100419                                   
+   000231                    .                                                            00100519                                   
+   000232                410-PROCESS-MASTER.                                              00100620                                   
+   000233                    IF WS-TRANS-PROCESS                                          00100720                                   
+   000234      1                PERFORM 260-PRINT-TOTAL-LINE                              00100820                                   
+   000235                    END-IF                                                       00100920                                   
+   000236                    MOVE AW-END-BALANCE TO IR-BALANCE                            00101027                                   
+   000237                    MOVE IR-CUST-RECORD TO CUST-NEW-MASTER-LIST                  00101127                                   
+   000238                    WRITE CUST-NEW-MASTER-LIST                                   00101220                                   
+   000239                    .                                                            00101320                                   
+   000240                420-PROCESS-UNMATCHED-MSTR.                                      00101420                                   
+   000241                    MOVE CUST-RECORD TO CUST-NEW-MASTER-LIST                     00101520                                   
+   000242                    WRITE CUST-NEW-MASTER-LIST                                   00101620                                   
+   000243                    .                                                            00101720                                   
+   000244                500-READ-TRANS.                                                  00101819                                   
+   000245                    READ CUST-TRANS                                              00101919                                   
+   000246                       INTO TR-CUST-TRANS-RECORD                                 00102019                                   
+   000247                    AT END                                                       00102119                                   
+   000248      1                SET TS-TRANS-EOF TO TRUE                                  00102224                                   
+   000249                    END-READ                                                     00102319                                   
+   000250                    .                                                            00102419                                   
+   000251                510-PROCESS-TRANS.                                               00102520                                   
+   000252                    IF WS-TRANS-DONT-PROCESS                                     00102620                                   
+   000253      1                PERFORM 250-HEADINGS                                      00102720                                   
+   000254      1                INITIALIZE ARITHMETIC-WORK-AREA                           00102820                                   
+   000255                    END-IF                                                       00102920                                   
+   000256                    ADD 1 TO AW-TRANS-COUNTER                                    00103020                                   
+   000257                    MOVE TR-AMOUNT TO RL-AMOUNT                                  00103130                                   
+   000258                    PERFORM 520-TRANS-TYPE-SEARCH                                00103220                                   
+   000259                    PERFORM 270-COMPUTE-NEW-BALANCE                              00103328                                   
+   000260                    MOVE RL-REPORT TO CUST-LIST                                  00103526                                   
+   000261                    WRITE CUST-LIST                                              00103626                                   
+   000262                    .                                                            00103720                                   
+   000263                520-TRANS-TYPE-SEARCH.                                           00103820                                   
+   000264                    SET PT-IDX TO 1                                              00103920                                   
+   000265                    SEARCH PT-ENTRY                                              00104026                                   
+   000266                       WHEN                                                      00104120                                   
+   000267                          TR-TRANS-TYPE = PT-CODE (PT-IDX)                       00104220                                   
+   000268      1                      MOVE PT-TYPE (PT-IDX) TO RL-TRANS-TYPE              00104320                                   
+   000269                    END-SEARCH                                                   00104420                                   
+   000270                    .                                                            00104520                                   
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               MATCHIN   Date 12/07/2017  Time 10:02:44   Page     8                
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference           
+0  000271                530-PROCESS-UNMATCHED-TRANS.                                     00104620                                   
+   000272                    MOVE TR-CUST-TRANS-RECORD TO EL-ERROR-EVENT                  00104720                                   
+   000273                    MOVE EL-ERROR-LIST TO CUST-ERRORS-LIST                       00104820                                   
+   000274                    WRITE CUST-ERRORS-LIST                                       00104920                                   
+   000275                       AFTER ADVANCING 1 LINE                                    00105020                                   
+   000276                    .                                                            00105120                                   
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               MATCHIN   Date 12/07/2017  Time 10:02:44   Page     9                
+0LineID  Message code  Message text                                                                                                  
+                                                                                                                                     
+     20  IGYGR1216-I   A "RECORDING MODE" of "F" was assumed for file "CUST-FILE".                                                   
+                                                                                                                                     
+     22  IGYGR1216-I   A "RECORDING MODE" of "F" was assumed for file "CUST-TRANS".                                                  
+                                                                                                                                     
+     24  IGYGR1216-I   A "RECORDING MODE" of "F" was assumed for file "CUST-NEW-MASTER".                                             
+                                                                                                                                     
+     26  IGYGR1216-I   A "RECORDING MODE" of "F" was assumed for file "CUST-RPT".                                                    
+                                                                                                                                     
+     28  IGYGR1216-I   A "RECORDING MODE" of "F" was assumed for file "CUST-ERRORS".                                                 
+-Messages    Total    Informational    Warning    Error    Severe    Terminating                                                     
+0Printed:       5           5                                                                                                        
+-* Statistics for COBOL program MATCHIN:                                                                                             
+ *    Source records = 276                                                                                                           
+ *    Data Division statements = 58                                                                                                  
+ *    Procedure Division statements = 85                                                                                             
+0End of compilation 1,  program MATCHIN,  highest severity 0.                                                                        
+0Return code 0                                                                                                                       
+ 19653373Jen   Aniston  003172E
+ 28410574GeraldFord     0000124
+ 29994591Chris Brown    0023512
+ 34757570Bob   Hope     0001231
+ 37919367Nick  Jonas    0024512
+ 38502041Carol Kline    0023141
+ 38951991Bill  Gates    0013141
+ 41572681Harry Potter   0000242
+ 51392965Ali   Sanchez  0018214
+ 52341797Sam   Hunt     010580B
+ 58876477Sue   King     0032842
+ 60721280Kelly Smith    0012451
+ 67228905Cindy Crawford 0091401
+ 70833663Sarah Sloan    015886B
+ 71808883Hal   Jordan   0023212
+ 74059204HannahMartin   0012415
+ 78158876Betty White    0081412
+ 78249307AmandaThomas   0036235
+ 79650216BaileyBradford 0063425
+ 81111366Tom   Cruise   0091481
+ 81168472Joe   King     003160A
+ 81513647Chris Pratt    0024526
+ 81528396Brad  Pitt     0014124
+ 85022320Karen Kingsman 001739D
+ 87933090Jeff  Foxworthy001563R
+ 12/07/2017                                                                             
+1    NAME         ACCOUNT NUMBER   BALANCE                                              
+0Jen    Aniston      19653373        $  4512                                            
+0      W OR D        AMOUNT                                                             
+       DEPOSIT       $ 2340                                                             
+       DEPOSIT       $25124                                                             
+       WITHDRAWAL    $  251                                                             
+0    TOTAL TRANSACTIONS: 3    ENDING BALANCE:  $ 31,725                                 
+ 12/07/2017                                                                             
+1    NAME         ACCOUNT NUMBER   BALANCE                                              
+0Sam    Hunt         52341797        $ 12451                                            
+0      W OR D        AMOUNT                                                             
+       DEPOSIT       $24512                                                             
+       DEPOSIT       $35324                                                             
+       DEPOSIT       $33515                                                             
+0    TOTAL TRANSACTIONS: 3    ENDING BALANCE:  $105,802                                 
+ 12/07/2017                                                                             
+1    NAME         ACCOUNT NUMBER   BALANCE                                              
+0Sarah  Sloan        70833663        $ 84712                                            
+0      W OR D        AMOUNT                                                             
+       DEPOSIT       $86724                                                             
+       WITHDRAWAL    $  123                                                             
+       WITHDRAWAL    $12451                                                             
+0    TOTAL TRANSACTIONS: 3    ENDING BALANCE:  $158,862                                 
+ 12/07/2017                                                                             
+1    NAME         ACCOUNT NUMBER   BALANCE                                              
+0Joe    King         81168472        $ 56823                                            
+0      W OR D        AMOUNT                                                             
+       DEPOSIT       $ 1522                                                             
+       WITHDRAWAL    $ 2412                                                             
+       WITHDRAWAL    $24332                                                             
+0    TOTAL TRANSACTIONS: 3    ENDING BALANCE:  $ 31,601                                 
+ 12/07/2017                                                                             
+1    NAME         ACCOUNT NUMBER   BALANCE                                              
+0Karen  Kingsman     85022320        $ 34243                                            
+0      W OR D        AMOUNT                                                             
+       DEPOSIT       $24910                                                             
+       WITHDRAWAL    $  514                                                             
+       WITHDRAWAL    $41245                                                             
+0    TOTAL TRANSACTIONS: 3    ENDING BALANCE:  $ 17,394                                 
+ 12/07/2017                                                                             
+1    NAME         ACCOUNT NUMBER   BALANCE                                              
+0Jeff   Foxworthy    87933090        $ 81914                                            
+0      W OR D        AMOUNT                                                             
+       DEPOSIT       $  141                                                             
+       DEPOSIT       $  450                                                             
+       WITHDRAWAL    $98144                                                             
+0    TOTAL TRANSACTIONS: 3    ENDING BALANCE: -$ 15,639                                 
+ ACCOUNT NUMBER ERROR: 52125172              
+ ACCOUNT NUMBER ERROR: 81512847              

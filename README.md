@@ -9,4 +9,8 @@
 <i> COBOL Output Files </i>
 
 <h2> Grade = A </h2>
+  <br></br>
+<p align="left">
+  <img src="http://www.dcoss.org/dcoss12/resources/usc.jpg" width="200">
+ </p>
 
